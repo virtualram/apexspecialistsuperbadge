@@ -1,4 +1,4 @@
-# apexspecialistsuperbadge source code and other code samples for folks learnings saleforce development .
+# apexspecialistsuperbadge source code and other code samples for folks learning saleforce development .
 
 
 
