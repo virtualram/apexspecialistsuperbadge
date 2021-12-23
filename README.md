@@ -1,5 +1,7 @@
 # apexspecialistsuperbadge source code and other code samples for folks learnings saleforce development .
 
+
+
 Find Apex code samples for 
 1. Apex class
 2. Soap API
@@ -10,6 +12,47 @@ Find Apex code samples for
 7. Controllers for Aura components
 8. LWC examples
 9. Aura examples 
+
+Learn Salesforce:
+
+Please check out more tutorials -> Python,angular,react, html ,javasript
+Python =>https://www.tutorialspoint.com/market/course/preview/6021
+
+Angular and React =>https://www.tutorialspoint.com/market/course/preview/6022
+
+Html javascript =>https://www.tutorialspoint.com/market/course/preview/6020
+
+:Salesforce Apex : https://www.tutorialspoint.com/market/course/preview/6032
+
+
+Salesforce LWC => https://www.tutorialspoint.com/market/course/preview/6030
+Please find 7 udemy courses coupons
+Topics:html,javascript,python,angular,reactjs,salesforce apex,salesforce admin,lwc and aura components
+Learn HTML and JAVASCRIPT in one day
+https://www.udemy.com/course/learn-html-and-javascript-in-one-day/?referralCode=67C209F40F7515242493
+
+Python course for Beginners: Complete Python Programming2021
+https://www.udemy.com/course/python-programming-tutorial-o/?referralCode=FB99447A30A1766B093C
+
+Learn Angular and React -Web Development
+https://www.udemy.com/course/react-js-essenstials-bootcamp-for-beginners/?referralCode=0EB19F744538AA7A6711
+
+Salesforce Apex Programming tutorial with  realtime practise exam
+https://www.udemy.com/course/salesforce-apex-programming-bootcamp/?referralCode=F1DC7A46AB32DE7C0E5B
+
+Salesforce Certified Administrator tutorial and realtime practise exam
+https://www.udemy.com/course/salesforce-administrator-201-app-builder-developer/?referralCode=DE2D8D991D974B513C52
+
+
+Salesforce Lightning Component :Aura web components Dev 601
+https://www.udemy.com/course/programming-salesforce-lightning-components-dev-601-salesforce/?referralCode=BBBD2150DF5A0E311A29
+
+Salesforce Lightning Web Component
+https://www.udemy.com/course/salesforce-lightning-web-component-development-essentials/?referralCode=BE04BF5D454AA5E76A80
+
+Join Linkedin learn group
+https://www.linkedin.com/groups/9100048/
+Best Regards
 
 
 
