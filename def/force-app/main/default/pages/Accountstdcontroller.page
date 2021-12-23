@@ -1,0 +1,15 @@
+<apex:page sidebar="false" standardController="Account" >
+
+
+<apex:pageblock title="Accounts" >
+    
+    <apex:pageBlockTable value="{!Account}" var="acc">
+  
+        <apex:column value="{!acc.name}"/> 
+      
+        
+       </apex:pageBlockTable>
+    </apex:pageblock>
+  <apex:relatedList list="Account.Contacts" />
+
+</apex:page>

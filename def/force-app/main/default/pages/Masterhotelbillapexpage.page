@@ -1,0 +1,15 @@
+<apex:page standardStylesheets="false" showHeader="false" sidebar="false"
+standardController="Masterhotelbill__c" recordSetVar="hotel">
+<apex:form >
+
+<apex:dataTable value="{!hotel}" var="pitem" rowClasses="odd,even">
+<apex:column headerValue="HotelName">
+<apex:outputText value="{!pitem.name}"/>
+</apex:column>
+<apex:column headerValue="Physical Count">
+<apex:inputField value="{!pitem.name}"/>
+</apex:column>
+</apex:dataTable>
+<apex:commandButton id="update" action="{!quicksave}" value="Update Counts"/>
+</apex:form>
+</apex:page>

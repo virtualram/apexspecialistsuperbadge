@@ -1,0 +1,12 @@
+<aura:component controller="dxaccountname" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+       <aura:registerEvent name ="dxcmp" type="c:DXCevent"/>
+    <aura:attribute name="Accountid" type="String" />
+    <aura:attribute name="ContactName" type="String" />    
+     <aura:attribute name="Contactlist" type="Contact[]" />  
+    <ui:inputtext value="{!v.Accountid}" label ="Accid"/>
+    Contact Names
+   <aura:iteration items="{!v.Contactlist}" var="item">
+        <p>{!item.LastName}</p>
+    </aura:iteration>
+    <aura:handler name="change" value="{!v.Accountid}" action ="{!c.fetchcontacts}"/>
+</aura:component>

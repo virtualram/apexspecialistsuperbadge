@@ -1,0 +1,23 @@
+<apex:page controller="studcustomcontroller" >
+    <apex:messages /> 
+  <script  language="javascript">
+    function checkit(abc){
+        
+        alert('hi'+"{!students}");
+        console.log(abc);
+        }
+    
+    </script>
+    <apex:pageblock title="Welcome {!$User.FirstName} "  	> 
+          <apex:pageBlockSection collapsible="true"  >
+        <apex:pageBlockTable value="{!students}" var="studmast">
+      
+                <apex:column onclick="checkit({!studmast.name})" value="{!studmast.Id}"/> 
+                <apex:column value="{!studmast.name}"/> 
+                <apex:column value="{!studmast.Department__c}"/>
+      
+                
+        </apex:pageBlockTable>
+        </apex:pageBlockSection>
+</apex:pageblock> 
+</apex:page>

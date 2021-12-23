@@ -1,0 +1,8 @@
+Hello  {!Candidate__c.Name},
+
+Your interview status is  :{!Candidate__c.Status__c}.
+Reason for Rejection:
+{!Candidate__c.Reasonforclearorreject__c}
+
+Thanks,
+{!User.Username}

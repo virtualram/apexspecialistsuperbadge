@@ -1,0 +1,5 @@
+<apex:page controller="msgpage" >
+<apex:pageMessages />
+<apex:outputLabel value="{!testvar}" ></apex:outputLabel>
+
+</apex:page>

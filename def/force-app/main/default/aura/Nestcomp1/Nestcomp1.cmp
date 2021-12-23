@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute type="String" name="nestcomp1data" default="test1"/>
+   <aura:handler event="c:Nestcompappevent" action="{!c.handleApplicationEvent}"/>
+    Parent comp
+    <c:Nestcomp2 nestcomp2data="{!v.nestcomp1data}"/>
+    
+</aura:component>

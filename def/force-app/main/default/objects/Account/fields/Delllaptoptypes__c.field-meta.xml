@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delllaptoptypes__c</fullName>
+    <externalId>false</externalId>
+    <label>Delllaptoptypes</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dell latitutde 90</fullName>
+                <default>false</default>
+                <label>Dell latitutde 90</label>
+            </value>
+            <value>
+                <fullName>Dell Balde server</fullName>
+                <default>false</default>
+                <label>Dell Balde server</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

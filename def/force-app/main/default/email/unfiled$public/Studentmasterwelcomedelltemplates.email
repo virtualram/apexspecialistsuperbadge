@@ -1,0 +1,8 @@
+We are delighted to welcome you
+
+{!StudentMaster__c.Name}
+
+to our University {!StudentMaster__c.University_Name__c}
+on this date {!StudentMaster__c.DOJ__c}
+thank you,
+{!StudentMaster__c.OwnerFullName}

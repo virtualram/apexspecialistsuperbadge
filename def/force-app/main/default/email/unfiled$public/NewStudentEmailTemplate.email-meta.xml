@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>NewStudentEmailTemplate</name>
+    <style>none</style>
+    <subject>Welcome to the new course</subject>
+    <textOnly>Hello {!01I90000001cGc9.Name},  Welcome to the course Please see the following link for more  Thanks {!01I90000001cGc9.OwnerFullName}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

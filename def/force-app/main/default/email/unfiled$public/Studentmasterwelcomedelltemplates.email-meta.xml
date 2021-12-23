@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Studentmasterwelcomedelltemplates</name>
+    <style>none</style>
+    <subject>Welcome to dell university</subject>
+    <textOnly>We are delighted to welcome you  {!StudentMaster__c.Name}  to our University {!StudentMaster__c.University_Name__c} on this date {!StudentMaster__c.DOJ__c} thank you, {!StudentMaster__c.OwnerFullName}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

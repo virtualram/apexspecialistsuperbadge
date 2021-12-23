@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rentvalidation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(IF(Rent__c &gt; 10000, true, false) ,IF(Rent__c &lt; 20000, true, false) )</errorConditionFormula>
+    <errorMessage>Rent cant be between 10000 and 20000</errorMessage>
+</ValidationRule>

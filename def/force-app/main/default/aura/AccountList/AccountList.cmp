@@ -1,0 +1,38 @@
+<aura:component controller ="AccountController2" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	   <aura:attribute type="String" name="rollupaccid"/>
+    <aura:attribute type="Boolean" name="hideunhide" default="false"/>
+       <aura:attribute type="Boolean" name="show" default="false"/>
+    <aura:attribute name="accounts" type="Account[]"/>   
+    <!--<aura:handler name="init" value="{!this}" action="{!c.doInit}" />-->
+    <!--skip this line-->
+    <aura:handler event="c:searchaccountevent" action="{!c.searchKeyChange2}"/>
+     <aura:handler name="change" value="{!v.rollupaccid}" action ="{!c.emptyaccountlist}"/>
+    <!--c:eventname-->
+    <!--aura handler of application should not have name atrribute -->
+    
+    <aura:if isTrue="{!v.hideunhide}">
+    <ul class="list-group">
+        <aura:iteration items="{!v.accounts}" var="Account">
+            <li class="list-group-item">                
+                <div class="demo-only slds-size_3-of-4">
+                    <div class="slds-media slds-media_small">
+                        <div class="slds-media__figure">
+                           
+                        </div> 
+                        <div class="slds-media__body">
+                            <!--<c:svgicon svgPath="/resource/slds214/assets/icons/standard-sprite/svg/symbols.svg#Account" category="standard" size="large" name="account" />-->
+                            <a aura:id="link1" href="{! '#Account/' + Account.Id }" >
+                                <!-- onclick="{!c.showalert}">-->
+                                <p>{!Account.Name}</p>
+                                <p>{!Account.Phone}</p>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </aura:iteration>
+    </ul>   
+   </aura:if>     
+  <c:AccountDetail  rollupaccid="{!v.rollupaccid}" show="{!v.show}"/>
+</aura:component>

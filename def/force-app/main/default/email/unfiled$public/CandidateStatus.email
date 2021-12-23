@@ -1,0 +1,9 @@
+Hello Anuradha,
+
+
+  Candidate   {!Candidate__c.Name}      interview status is   :{!Candidate__c.Status__c}
+
+
+Thanks,
+{!User.Username}
+HR Department

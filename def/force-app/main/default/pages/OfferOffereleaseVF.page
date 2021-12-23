@@ -1,0 +1,43 @@
+<apex:page controller="OfferOffereleaseVF_customController1">
+	<apex:form id="formid">
+		<apex:pageMessages />
+		<apex:pageblock id="CustomList" title="Offerings">
+			<apex:pageBlockTable value="{!offer}" var="o">
+				<apex:column value="{!o.Name}" />
+				<apex:column value="{!o.id}" />
+				<apex:column value="{!o.Description_Text_Area__c}" />
+				<apex:column >
+					<apex:commandButton value="click" action="{!TestX}" rerender="formid">
+						<apex:param name="X" value="{!o.id}" /></apex:commandButton>
+				</apex:column>
+			</apex:pageBlockTable>
+		</apex:pageblock>
+		<apex:pageblock id="CustomList1" title="Offerings release">
+			<apex:pageBlockTable value="{!offerrelease1}" var="or">
+				<apex:column value="{!or.Name}" />
+				<apex:column value="{!or.id}" />
+				<apex:column >
+					<apex:commandButton value="click" action="{!TestX}" rerender="formid">
+						<apex:param name="X" value="{!or.id}" /></apex:commandButton>
+				</apex:column>
+			</apex:pageBlockTable>
+		</apex:pageblock>
+		<apex:pageblock id="CustomList11" title="Offerings release entry">
+			<apex:inputtext value="{!aName}" />
+			<apex:inputtext value="{!arvn}" />
+			<apex:inputtext value="{!arvt}" />
+			<apex:inputtext value="{!aparentoffer}" />
+			<apex:outputtext value="{!strX}" />
+			<apex:commandButton value="click" action="{!TestX1}" rerender="formid">
+				<apex:param name="X" value="{!aName}" /></apex:commandButton>
+		</apex:pageblock>
+		<apex:pageblock id="CustomList3" title="Core team member">
+			<apex:pageBlockTable value="{!ctm}" var="ct">
+				<apex:column value="{!ct.Name}" />
+				<apex:column value="{!ct.id}" />
+				<apex:column value="{!ct.User_ID_Lookup_Rel__r.LastName}" />
+				<apex:column value="{!ct.User_ID_Lookup_Rel__r.Username}" />
+				<apex:column value="{!ct.Role_ID_Master_Detail_Rel__r.Name}" /></apex:pageBlockTable>
+		</apex:pageblock>
+	</apex:form>
+</apex:page>

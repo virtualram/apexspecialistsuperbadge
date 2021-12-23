@@ -1,0 +1,63 @@
+<aura:component controller="Customer360Lightning" implements="force:appHostable,flexipage:availableForAllPageTypes">
+ <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <lightning:spinner variant="brand" size="large" aura:id="loading" class="slds-hide" />
+ <aura:attribute name="accounts" type="Account[]"/>
+ <aura:attribute name="account" type="Account" default="{ 'sobjectType': 'Account',
+ 'Name': '',
+ 'AnnualRevenue': '0',
+ 'NumberofLocations__c':'0',
+ 'Industry':'Energey',
+ 'Description':''}"/>
+    <lightning:tabset onselect="{!c.changeTab}">
+    <lightning:tab label="New Account" id="newAccount">
+ <form>
+<fieldset>
+ <legend>Select your favorite color:</legend>
+    <lightning:input type="text" label="Name" name="Name" value="{!v.account.Name}"/>
+    <lightning:input type="number " label="Annual Revenue" formatter="currency" step="0.01" name="rev" value="{!v.account.AnnualRevenue}" aura:id="rev"/>
+    <lightning:input type="number" label="Number of Locations" name="numloc" value="{!v.account.NumberofLocations__c}" aura:id="numloc"/>
+    <lightning:select value="{!v.account.Industry}" name="select1" label="Select an item">
+<option value="Energey">Energey</option>
+<option value="Banking">Banking</option>
+<option value="Finance">Finance</option>
+<option value="Healthcare">Healthcare</option>
+<option value="Insurance">Insurance</option>
+<option value="Media">Media</option>
+ </lightning:select>
+    <lightning:textarea name="myTextArea" value="{!v.account.Description}" label="Comments" maxlength="300" /></fieldset>
+    <lightning:buttonGroup >
+    <lightning:button label="Refresh" iconName="utility:refresh" iconPosition="left"/>
+    <lightning:button label="Edit" iconName="utility:edit" iconPosition="left"/>
+    <lightning:button label="Save" iconName="utility:database" iconPosition="left" onclick="{!c.submitForm}"/>
+ </lightning:buttonGroup>
+ </form>
+    <lightning:card footer="Please like and comment if you like my blog and want to post more cool blogs">
+ <a href="" target="_blank" >Base lightning Components</a>
+ </lightning:card>
+ </lightning:tab>
+    <lightning:tab label="All Account" id="allAccount">
+ <aura:iteration items="{!v.accounts}" var="acc">
+    <lightning:layout horizontalAlign="spread" verticalAlign="center">
+    <lightning:layoutItem size="4" >
+<div>{!acc.Name}</div>
+</lightning:layoutItem>   <lightning:layoutItem size="2" >
+<div>{!acc.Type}</div>
+</lightning:layoutItem>   <lightning:layoutItem size="2" >
+<div>{!acc.Type}</div>
+</lightning:layoutItem>   <lightning:layoutItem size="2" >
+<div>{!acc.Website}</div>
+</lightning:layoutItem>   <lightning:layoutItem size="2" >
+<div></div>
+</lightning:layoutItem> </lightning:layout>
+ 
+<hr style="margin:0px;"/>
+ 
+</aura:iteration> </lightning:tab>  <lightning:tab label="Activity" id="activity">    <lightning:card footer="All Activities are done Footer"> <aura:set attribute="title">   <lightning:badge label="Hello"/> </aura:set> <aura:set attribute="actions">   <lightning:buttonMenu alternativeText="Toggle menu">  <lightning:menuItem label="New" value="New" iconName="utility:record_create" />   <lightning:menuItem label="Past Activities" value="Past" iconName="utility:deprecate" /> </lightning:buttonMenu>    <lightning:button label="Calender" iconName="utility:event" iconPosition="left"/>     <lightning:button label="FollowUp" iconName="utility:new" iconPosition="left"/> </aura:set>
+ 
+</lightning:card>
+ 
+</lightning:tab>
+ 
+</lightning:tabset>
+ 
+</aura:component>

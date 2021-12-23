@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Community xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <communityFeedPage>testnewzone_main</communityFeedPage>
+    <emailNotificationUrl>https://ramcommune-developer-edition.ap1.force.com/{!communityUrlPrefix}/devlight1973__testnewzone_main?id={!entityId}</emailNotificationUrl>
+    <enableChatterAnswers>true</enableChatterAnswers>
+    <enablePrivateQuestions>true</enablePrivateQuestions>
+    <expertsGroup>Edurekagroup</expertsGroup>
+    <reputationLevels>
+        <chatterAnswersReputationLevels>
+            <name>Newbie</name>
+            <value>0</value>
+        </chatterAnswersReputationLevels>
+        <chatterAnswersReputationLevels>
+            <name>Smartie</name>
+            <value>500</value>
+        </chatterAnswersReputationLevels>
+        <chatterAnswersReputationLevels>
+            <name>Pro</name>
+            <value>2000</value>
+        </chatterAnswersReputationLevels>
+        <chatterAnswersReputationLevels>
+            <name>All Star</name>
+            <value>5000</value>
+        </chatterAnswersReputationLevels>
+    </reputationLevels>
+    <showInPortal>false</showInPortal>
+    <site>TestCommunity</site>
+</Community>

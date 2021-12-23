@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute type="String" name ="cmpvariable"/>
+    <aura:handler name="init" value ="{!this}" action ="{!c.doInit}"/>
+    <br/>
+    <p> Value set on initialisation of component</p>
+    <p><b>{!v.cmpvariable}</b></p>
+</aura:component>

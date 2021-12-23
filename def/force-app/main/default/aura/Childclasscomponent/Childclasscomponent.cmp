@@ -1,0 +1,3 @@
+<aura:component extends="c:parentclasscomponent">
+    <aura:set attribute="address1" value="808 State St" />
+</aura:component>

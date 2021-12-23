@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>Queuefornorthbangalore</name>
+    <queueMembers>
+        <users>
+            <user>bsmith10000@yahoo.com</user>
+            <user>mira_ramdas@yahoo.co.in</user>
+            <user>narenrr@yahoo.com</user>
+            <user>test@ramnarayan-developer-edition.ap1.force.com</user>
+            <user>testcommunity@ramcommune-developer-edition.ap1.force.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Send_email</fullName>
+        <ccEmails>mira_ramdas@yahoo.co.in</ccEmails>
+        <ccEmails>meeraramdass12@gmail.com</ccEmails>
+        <description>Send email</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>mira_ramdas@yahoo.co.in</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>narenrr@yahoo.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/CandidateStatus</template>
+    </alerts>
+    <alerts>
+        <fullName>sendemailaboutcandidatestatus</fullName>
+        <description>sendemailaboutcandidatestatus</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>narenrr@yahoo.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Candidateemail2</template>
+    </alerts>
+    <rules>
+        <fullName>Candidateemail2rule</fullName>
+        <actions>
+            <name>sendemailaboutcandidatestatus</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Candidate__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Rejected,Cleared</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sendstatusemailtoanu</fullName>
+        <actions>
+            <name>Send_email</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>New_candidate_status_update</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Candidate__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Rejected,Cleared</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <tasks>
+        <fullName>New_candidate_status_update</fullName>
+        <assignedTo>narenrr@yahoo.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Create Login details</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>New candidate status update</subject>
+    </tasks>
+</Workflow>

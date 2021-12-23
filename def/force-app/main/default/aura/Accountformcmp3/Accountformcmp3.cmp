@@ -1,0 +1,43 @@
+<aura:component controller ="Accountpage2controller" implements="lightning:actionOverride,force:lightningQuickAction,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,lightning:actionOverride,force:hasRecordId" access="global" >
+    <aura:attribute name="errormessages" type="String" default=""/>
+    <aura:attribute name="accountObj" type="Account" default="{'sobjectType':'Account'}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+   
+  
+    <!---->>
+    
+    <fieldset class="slds-form-element slds-form_compound">
+  <legend class="slds-form-element__legend slds-form-element__label">Account Form</legend>
+  <div class="slds-form-element__control">
+    <div class="slds-form-element__group">
+      <div class="slds-form-element__row">
+        <div class="slds-form-element slds-size_1-of-2">
+         
+          <div class="slds-form-element__control">
+            <ui:inputText label ="Account Name" value="{!v.accountObj.Name}"/>
+          </div>
+        </div>
+        <div class="slds-form-element slds-size_1-of-2">
+        
+          <div class="slds-form-element__control">
+           <ui:inputText label="Account Number" value="{!v.accountObj.AccountNumber}"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>
+    
+    
+    
+    
+       <lightning:button  class="slds-button slds-button_brand" label="Save"  onclick="{!c.save1}"/>
+    
+        <button class="slds-button slds-button_brand">Cancel</button>
+    
+    
+    
+    
+    
+    
+</aura:component>

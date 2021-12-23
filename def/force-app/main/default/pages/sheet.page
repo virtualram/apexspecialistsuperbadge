@@ -1,0 +1,18 @@
+<apex:page standardController="Detailhotelbillitems__c" recordSetVar="products">
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  <apex:dataTable value="{!products}" var="pitem" rowClasses="odd,even">
+<apex:column headerValue="Bill Number">
+<apex:outputText value="{!pitem.billnumber__c}"/> 
+
+
+</apex:column>
+<apex:column headerValue="Bill Value" >
+<apex:outputText value="{!pitem.billvalue__c}"/>
+
+
+</apex:column>
+</apex:dataTable>
+  This is your new Page: sheet
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

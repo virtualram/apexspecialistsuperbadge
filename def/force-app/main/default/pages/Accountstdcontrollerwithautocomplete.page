@@ -1,0 +1,37 @@
+<apex:page standardController="Account" extensions="AccountController1">
+  <apex:form >
+    <apex:pageBlock title="My Content" mode="edit">
+      <apex:pageBlockButtons >
+        <apex:commandButton action="{!save}" value="Save"/>
+      </apex:pageBlockButtons>
+        
+        <apex:actionRegion >
+                <apex:inputCheckbox label="CreateContact" value="{!togglescreen1}" >
+                    <apex:actionSupport event="onclick"    rerender="embed" />
+                </apex:inputCheckbox>
+            </apex:actionRegion>   
+        
+        
+         <apex:actionRegion >
+                <apex:inputCheckbox label="ShowContactList" value="{!togglescreen2}" >
+                    <apex:actionSupport event="onclick"    rerender="embed1" />
+                </apex:inputCheckbox>
+            </apex:actionRegion>   
+      <apex:pageBlockSection title="My Content Section" columns="2">
+        <apex:inputField value="{!account.name}"/>
+         <c:AutoComplete objectname="account" input_id="{!$Component.FieldId}" numberOfResultsToDisplay="20" wildcardBefore="false" filterField="name" filterValue="{!account.name}"/>
+        <apex:inputField value="{!account.site}"/>
+        <apex:inputField value="{!account.type}"/>
+        <apex:inputField value="{!account.accountNumber}"/>
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+      
+
+  </apex:form>
+     <apex:pageBlock id="embed">
+     <apex:include rendered="{!togglescreen1}" pageName="VFformforcontacts"/>
+          </apex:pageBlock>
+    <apex:pageBlock id="embed1">
+     <apex:include rendered="{!togglescreen2}" pageName="VFpagnatethroughcontacts"/>
+          </apex:pageBlock>
+</apex:page>

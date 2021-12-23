@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	 <aura:attribute name="firstvalue" type="double" default="16"/>
+    <aura:attribute name="secondvalue" type="double" default="34"/> 
+    
+     
+    <ui:inputNumber label="Enter Number" value="{!v.firstvalue}"/>
+    <lightning:button label="+"  onclick="{!c.adddata}"/>
+     <lightning:button label="="  onclick="{!c.showdata}"/>
+    <c:Nestedcomp valuefromparent="{#v.firstvalue}"/>
+    
+</aura:component>

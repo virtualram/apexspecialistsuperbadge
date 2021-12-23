@@ -1,0 +1,11 @@
+<aura:component controller="ContactController" implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    
+    <aura:handler event="c:MapEvent" action="{!c.getcoords}"/>
+     <ltng:require styles="/resource/leaflet/leaflet.css" />    
+    <ltng:require scripts="/resource/leaflet/leaflet.js"  afterScriptsLoaded="{!c.jsLoaded}"   />
+   <aura:attribute name="lat" type="double"/>
+     <aura:attribute name="long" type="double"/>
+    <aura:registerevent name="MapEvent"  type="c:MapEvent" />
+                 <div class="map" id="map"></div>
+
+</aura:component>

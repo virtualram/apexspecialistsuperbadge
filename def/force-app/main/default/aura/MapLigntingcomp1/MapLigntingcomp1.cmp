@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+
+
+    <ltng:require styles="/resource/leaflet/leaflet.css" />    
+    <ltng:require scripts="/resource/leaflet/leaflet.js"/> <!-- afterScriptsLoaded="{!c.jsLoaded}" /-->
+             
+
+    <div class="map" id="map"></div>
+    <aura:handler name="listenevent" event="c:MapEvent" action="{!c.jsLoaded1}"/>
+
+</aura:component>

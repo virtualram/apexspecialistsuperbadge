@@ -1,0 +1,25 @@
+<apex:page controller="customcontrolleraccountsave" sidebar="false" >
+    <apex:form >
+        <apex:message />   
+        <apex:messages />
+        <apex:pageMEssage summary="This is account detail form for new verified banking customers,Please ensure all documents are submitted by customer before entering the data" severity="Error" strength="1"/>
+        <apex:pageBlock id="counter"  mode="detail" title="{!if($CurrentPage.parameters.id == null,  'Create Account', 'Edit Account')}">
+            
+            <apex:pageBlockSection title="Account Data Entry" >   
+              
+                <apex:inputtext label="Account Name" id="accountname" value="{!accountnamevariable}"   />
+              
+                <apex:inputtext label="Account Number" id="accountname2" value="{!accountnamevariable}" />
+                
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton id="save" value="Save Account" action="{!savemyrecord}"/>
+            </apex:pageBlockButtons>
+            <!--<c:VFcomponent myvalue="Mytest string for display" bordercolor="red"/>-->
+        </apex:pageBlock>
+        
+        
+    </apex:form>
+    
+    
+</apex:page>

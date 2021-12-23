@@ -1,0 +1,27 @@
+<apex:page Controller="ContactclassforVF" action="{!getlist}" >
+    <apex:form >
+        <apex:pageBlock title="Contacts" tabStyle="contact">
+            <apex:pageBlockSection title="Enter Contact Details">
+                <apex:inputtext label="Name" value="{!contactname}"/>
+                <apex:inputtext label="Email" value="{!contactemail}"/>
+            </apex:pageBlockSection>
+            Record Created {!contactid}
+            Errors : {!errormessage}
+            <apex:pageBlockButtons >
+                <apex:commandButton value="save" action="{!Save1}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="Contacts Created Today" tabStyle="Contact">
+            <apex:pageblockTable value="{!reclist}" var="tablevar"  >
+                <apex:column value="{!tablevar.Name}"/>
+                <apex:column value="{!tablevar.Email}"/>  
+                
+            </apex:pageblockTable>
+        </apex:pageBlock>
+        
+        
+        
+    </apex:form>
+    
+</apex:page>

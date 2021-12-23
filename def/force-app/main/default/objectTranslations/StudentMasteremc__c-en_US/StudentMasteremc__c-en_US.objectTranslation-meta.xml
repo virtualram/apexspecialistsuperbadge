@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>StudentMasteremc</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>StudentMasteremcs</value>
+    </caseValues>
+    <layouts>
+        <layout>StudentMasteremc Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Datecheck</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>age</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>countrypicklistvalidation</name>
+    </validationRules>
+    <workflowTasks>
+        <name>Please_create_id_card_for_student</name>
+        <subject></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

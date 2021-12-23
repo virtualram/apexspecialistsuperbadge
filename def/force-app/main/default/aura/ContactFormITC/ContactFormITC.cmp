@@ -1,0 +1,56 @@
+<aura:component Controller="Contactcreator" implements="lightning:actionOverride,force:lightningQuickAction,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,lightning:actionOverride,force:hasRecordId" access="global" >
+   <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="conObj" type="Contact" default="{'sobjectType':'Contact'}"/>
+    <aura:attribute name="truthy" type="Boolean" default="false"/>
+    
+    
+     <fieldset class="slds-form-element slds-form-element_compound">
+<legend class="slds-form-element__legend slds-form-element__label">Contact Details</legend>
+<div class="slds-form-element__control">
+<div class="slds-form-element__row">
+<div class="slds-size_1-of-3">
+<div class="slds-form-element">
+
+<div class="slds-form-element__control">
+ <ui:inputtext label="Name" value="{!v.conObj.LastName}"/> 
+</div>
+</div>
+</div>
+<div class="slds-size_1-of-3">
+<div class="slds-form-element">
+
+<div class="slds-form-element__control">
+   <ui:inputtext label="Email" value="{!v.conObj.Email}"/> 
+</div>
+</div>
+</div>
+</div>
+</div>
+</fieldset>
+	
+   <aura:if isTrue="{!v.truthy}">
+    <fieldset class="slds-form-element slds-form-element_compound">
+   
+<div class="slds-form-element__control">
+<div class="slds-form-element__row">
+<div class="slds-size_1-of-3">
+<div class="slds-form-element">
+
+<div class="slds-form-element__control">
+   <ui:inputtext label="Description" value="{!v.conObj.Description}"/> 
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</fieldset>
+           </aura:if>
+	  <lightning:button variant="brand" label="Save"  onclick="{!c.savedata}"/> 
+    <button class="slds-button slds-button_brand">Cancel</button>
+     <lightning:button variant="brand" label="Toggle description Field"  onclick="{!c.showdesc}"/> 
+ 
+ 
+
+    
+</aura:component>

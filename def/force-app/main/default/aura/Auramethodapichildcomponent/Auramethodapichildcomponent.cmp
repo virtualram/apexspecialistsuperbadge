@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute type="String" name="childattr1"/>
+    <aura:method name="execute1"/>
+   
+   <!-- If you don’t specify an action value, the controller action defaults to the value of the method name.-->
+
+    Child component 
+</aura:component>

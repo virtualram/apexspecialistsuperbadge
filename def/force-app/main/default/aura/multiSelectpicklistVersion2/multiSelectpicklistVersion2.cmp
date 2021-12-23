@@ -1,0 +1,48 @@
+<aura:component controller="GenericMultiSelectVersion2" 
+                implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes,force:appHostable" 
+                access="global">
+
+	<ltng:require styles="/resource/SLDS0102/assets/styles/salesforce-lightning-design-system.min.css" />
+    
+    <aura:attribute name="objName" type="String" default="Contact" access="global"/>
+    <aura:attribute name="fieldAPIName" type="String" default="Test_Multi__c" access="global"/>
+    <aura:attribute name="addSelectedValues" type="String" access="global"/>
+    <aura:attribute name="removeSelectedValues" type="String" access="global"/>
+    <aura:attribute name="selectedrelidshidden" type="String[]" access="global"/>
+    <aura:attribute name="contactid" type="String" access="global"/>
+    <aura:attribute name="selConId" type="string" access="global"/>
+    <aura:attribute name="childAttr4" type="String" default=""/> 
+	<aura:handler name="cmpEvent" event="c:multiselectlookupevent" action="{!c.handleComponentEvent2}"/>
+    <aura:handler name="change" value="{!v.selConId}"   action="{!c.keyController}"/>
+    <c:customLookup2 childAttr2="{!v.contactid}" selectedConId="{!v.selConId}"/>  
+     
+    <div id="divCheckbox" style="display: none;">
+    <ui:inputText label="Contact Id" value="{!v.selConId}" />
+    <ui:inputText aura:id="relationid" label="relids" value="{!v.selectedrelidshidden}" />
+    </div>
+    <div class="slds-form-element">
+	<div class="slds-picklist--draggable slds-grid" data-aljs="multi-select">
+		<div class="slds-form-element">
+		<b>	<span class="slds-form-element__label" aria-label="select-1">Available Rel </span> </b>
+			<div class="slds-picklist slds-picklist--multi" data-aljs-multi-select="unselected">
+				<ul class=" slds-picklist__options--multi shown">
+					<ui:inputSelect multiple="true" value="{!v.addSelectedValues}" aura:id="leftSelectedValues" class="dynamic oSelect"  />
+				</ul>
+			</div>
+		</div>
+		<div class="slds-grid slds-grid--vertical">
+			<ui:button aura:id="btnMove" class="slds-button slds-button__icon-container button" label="&gt;&gt;" press="{!c.shiftRight}"/>
+			<ui:button aura:id="btnRemove" class="slds-button slds-button__icon-container button" label="&lt;&lt;" press="{!c.shiftLeft}"/>
+		</div>
+		<div class="slds-form-element">
+		<b>	<span class="slds-form-element__label" aria-label="select-2">Selected Rel</span> </b>
+			<div class="slds-picklist slds-picklist--multi" data-aljs-multi-select="selected">
+				<ul class=" slds-picklist__options--multi shown">
+					<ui:inputSelect multiple="true" value="{!v.removeSelectedValues}" aura:id="rightSelectedValues" class="oSelect" click="{!c.enumerate}" />
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+</div>
+</aura:component>

@@ -1,0 +1,11 @@
+<aura:component >
+    <!-- below registerEvent is for dynamic event handler only-->
+    <aura:registerEvent name="appEvent" type="c:aeEvent"/>
+    <!-- dont get confused- type is name of event and name is type of event-->
+
+    <h1>Simple Application Event Sample</h1>
+    <p><ui:button label="Click here to fire a application event"
+        press="{!c.fireApplicationEvent2}" />
+    </p>
+    
+</aura:component>

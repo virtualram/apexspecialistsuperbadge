@@ -1,0 +1,32 @@
+<apex:page controller="GetContacts">
+  <apex:pageMessages />
+    <apex:form id="formid">
+      
+        <apex:pageblock id="CustomList" title="Accounts">
+            <apex:pageBlockTable value="{!accts}" var="a" rows="2">
+                <apex:column value="{!a.Name}" />
+                <apex:column value="{!a.id}" />
+                <apex:column >
+                    <apex:commandButton value="click" action="{!TestX}" rerender="formid">
+                    <apex:param name="X" value="{!a.id}" /></apex:commandButton>
+                </apex:column>
+       
+            </apex:pageBlockTable>
+        </apex:pageblock>
+        <apex:pageblock id="CustomList11" title="Enter Contact search First name last name">
+            
+            <apex:inputtext value="{!arvn}" />
+            <apex:inputtext value="{!arvt}"/>
+             <apex:inputtext value="{!strX}"/>
+           <apex:commandButton value="Search Contact" action="{!TestX1}" rerender="CustomLis1t">
+           </apex:commandButton>
+        </apex:pageblock>
+         <apex:pageblock id="CustomLis1t" title="Contacts">
+            <apex:pageBlockTable value="{!contacts}" var="c" rows="2">
+                <apex:column value="{!c.Name}" />
+                <apex:column value="{!c.id}" />
+               
+            </apex:pageBlockTable>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

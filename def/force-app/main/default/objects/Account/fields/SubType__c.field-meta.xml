@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubType__c</fullName>
+    <externalId>false</externalId>
+    <label>SubType</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Subtype A</fullName>
+                <default>false</default>
+                <label>Subtype A</label>
+            </value>
+            <value>
+                <fullName>Subtype B</fullName>
+                <default>false</default>
+                <label>Subtype B</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Channel Partner / Reseller</controllingFieldValue>
+            <controllingFieldValue>Installation Partner</controllingFieldValue>
+            <valueName>Subtype B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer - Channel</controllingFieldValue>
+            <controllingFieldValue>Customer - Direct</controllingFieldValue>
+            <controllingFieldValue>Prospect</controllingFieldValue>
+            <valueName>Subtype A</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

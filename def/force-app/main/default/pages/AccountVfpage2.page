@@ -1,0 +1,20 @@
+<apex:page controller="Accountpage2controller" >
+
+    <apex:form >
+        <apex:message />
+      <!--  <apex:messages />-->
+        <apex:pageMEssage summary="Please enter correct data" severity="1"  strength="1"/>
+     <apex:pageMessages />
+        <apex:pageBlock title="Account Detail">
+           <apex:pageBlockSection collapsible="true" title="Enter Account Details">    
+               <apex:inputText value="{!accname}" label="Account Name"/>
+                <apex:inputText value="{!accnumber}" label="Account Number"/>    
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+               <apex:commandButton value="Save" action="{!customsave}"/>
+            <!--    <apex:commandButton value="Cancel" action="{!Cancel}"/>-->
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

@@ -1,0 +1,18 @@
+<apex:page standardController="StudentMaster__c">
+
+    <apex:form >
+      
+        <apex:pageBlock title="Student Data">
+            <apex:outputLabel value="NAme"></apex:outputLabel>
+            <apex:inputfield value="{!StudentMaster__c.Name}" id="Name"/><br/>
+            <apex:outputLabel value="Age"> </apex:outputLabel>
+            <apex:inputfield value="{!StudentMaster__c.Age__c}" id="Age"/>  
+        </apex:pageBlock>
+        
+        <apex:commandButton title="Save" action="{!save}" value="save"/>
+        <apex:commandButton title="Cancel" action="{!cancel}" value="cancel" />
+        
+    </apex:form>
+    <apex:relatedList list="StudentMarks__r"/>
+    
+</apex:page>

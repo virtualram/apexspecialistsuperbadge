@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Createaccountfrom_JS</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>CreateaccountfromJS</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&apos;/soap/ajax/29.0/connection.js&apos;)} 
+{!REQUIRESCRIPT(&apos;/soap/ajax/29.0/apex.js&apos;)} 
+{!REQUIRESCRIPT(&apos;/support/console/33.0/integration.js&apos;)} 
+
+var id =sforce.apex.execute(&apos;Newaccountclass&apos;,&apos;createacc&apos;,{name:&apos;AccountfromJS1&apos;});</url>
+</WebLink>

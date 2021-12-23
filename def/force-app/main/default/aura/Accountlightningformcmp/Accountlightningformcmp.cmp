@@ -1,0 +1,45 @@
+<aura:component Controller ="Accountlightning" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+  <aura:attribute name="accObj" type="Account" default="{'sobjectType':'Account'}"/>
+      <aura:dependency resource="markup://force:navigateToSObject" type="EVENT"/>
+    
+    <div class="demo-only" style="width:440px">
+        <div class="slds-form slds-form_compound">
+            <fieldset class="slds-form-element">
+                <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Enter Account Details</legend>
+                <div class="slds-form-element__group">
+                    <div class="slds-form-element__row">
+                      
+                         
+                            <lightning:input label="Name"  value="{!v.accObj.Name}"/>   
+                             
+
+                   
+                           
+                             <lightning:input label="Number"  value="{!v.accObj.AccountNumber}" />   
+                     
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="slds-form-element">
+                <div class="slds-form-element__group">
+                    <div class="slds-form-element__row">
+                        <div class="slds-form-element slds-size_1-of-2">
+                            <label class="slds-form-element__label" for="input-01">Type</label>
+                            <input type="text" id="input-01" class="slds-input" />
+                        </div>
+                        <div class="slds-form-element slds-size_1-of-2">
+                            <label class="slds-form-element__label" for="input-02">Status</label>
+                            <input type="text" id="input-02" class="slds-input" />
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <div class="slds-button-group" role="group">
+                <lightning:button class="slds-button slds-button_neutral" onclick ="{!c.saveaccount}">Save</lightning:button>
+                <lightning:button class="slds-button slds-button_neutral">Cancel</lightning:button>
+                
+            </div>
+        </div>
+    </div>
+</aura:component>

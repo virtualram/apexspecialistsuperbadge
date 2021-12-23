@@ -1,0 +1,64 @@
+<aura:component controller="ContactController" implements="force:appHostable,flexipage:availableForAllPageTypes"    access="global">
+    <aura:attribute name="Amount" type="double" default="25000"/>    
+    <aura:attribute name="Tenure" type="double" default="16"/>
+    <aura:attribute name="Maturity" type="double" default="34"/> 
+    <aura:attribute name="accid"  type="String" default=""/>
+    <aura:attribute name="accountName" type="String" default=""/>
+    <aura:attribute name="Conid"  type="String" default=""/>
+    <aura:attribute name="ContactName" type="String" default=""/>
+    <aura:attribute name="contactlist" type="Contact[]"/>  
+    <aura:attribute name="errmess" type="String" default="Error message"/> 
+     <aura:attribute name="messageToJSApp" type="String" />
+    <aura:attribute name="messageFromJSApp" type="String" />
+
+    
+    <aura:handler name="change" value="{!v.Tenure}" action="{!c.fieldvalidornot}"/>
+    
+    
+    
+    
+    <aura:handler name="change" value="{!v.Conid}" action="{!c.getcontactname}"/>
+   <!-- <aura:handler name="change" value="{!v.Tenure}" action="{!c.tenurechanged}"/>-->
+    <!--<aura:handler name="render" value="{!this}" action="{!c.onRender}"/>-->
+    <aura:handler name="init" value="{!this}" action="{!c.oninit}"/> 
+    <aura:handler name="change" value="{!v.accid}" action="{!c.getacccontacts}"/>
+    <!--   <aura:handler name="change" value="{!v.tenure}" action="{!c.calculate1}"/>-->
+    <!-- Remember everything is case sensitive -->   
+    <aura:attribute name="Designresourcestring" type="String" /> 
+    <!-- <lightning:container aura:id="AngularApp1"  onmessage="{!c.handleMessage}" src="{!$Resource.angularapp1 + '/index.html'}"       />
+      <lightning:container aura:id="AngularApp2"  onmessage="{!c.handleMessage}" src="{!$Resource.angularapp2 + '/index.html'}"       />
+     -->
+           <div >
+      <!--  <c:facetheader >     
+            <aura:set attribute="header1">
+                Lightning Form from another comp
+            </aura:set>
+        </c:facetheader> -->       
+        <!--Lightning Form-->
+        <ui:inputText class=".colorme" label="Contactid" value="{!v.Conid}"/>    
+        <ui:inputText label="Contactname" value="{!v.ContactName}"/>
+        <ui:inputText  label="Accountid" value="{!v.accid}" />    
+        <ui:inputText label="AccountName" value="{!v.accountName}"/> 
+        <div aura:id="div2" class="toggle1">
+            <ui:inputNumber label="Coupon amount" value="{!v.Amount}"/>
+            <ui:inputNumber aura:id="tenure" label="Coupon Tenure" value="{!v.Tenure}"/>
+        </div>
+        <h2>Maturity Amount will be :</h2><ui:outputNumber value="{!v.Maturity}"/>
+        <br/><ui:button label="Calculate coupon returns" press="{!c.calculate11}"/>
+        <br/>        
+        <br/> <lightning:button label="remove css"  onclick="{!c.remclass}"/>  
+        <!--<c:auraiterationcmp contactlist= "{!v.contactlist}"/>-->
+        
+        
+      <!--  <ul class="list-group">
+             
+             
+        <aura:iteration items="{!v.contactlist}" var="conl">
+            <li>
+                Contact Name {!conl.Name}
+            </li>
+        </aura:iteration>
+    </ul>-->
+    </div>  
+    <p aura:id="text1"  class="toggle1">   Dynamic text toggling </p> 
+</aura:component>

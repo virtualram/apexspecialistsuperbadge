@@ -1,0 +1,29 @@
+<aura:component controller="testwrappercontrollerlightning" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    
+   <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="Contactwrapper" type="wrapperclass1"/>
+    
+    
+    <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Lastname</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TO Check if list is not empty-->
+              
+                    <aura:iteration var="wraps" items="{!v.Contactwrapper}" >
+                        <tr>
+                            <td><ui:inputCheckbox value="{!wraps.selected}"  change="{!c.storeval}"/></td>
+                            <td><ui:outputText value="{!wraps.acc.coo.LastName}"/></td>
+                            <td>hi</td>
+                        </tr>
+                    </aura:iteration>
+                
+            </tbody>
+        </table>
+</aura:component>

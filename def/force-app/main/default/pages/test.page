@@ -1,0 +1,5 @@
+<apex:page standardController="Account">
+    <apex:form >
+    <apex:commandButton action="{!URLFOR($Action.Account.New)}" value="Clone"/>
+    </apex:form>
+</apex:page>

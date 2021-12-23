@@ -1,0 +1,33 @@
+<apex:page controller="AccountController2">
+    <apex:slds />
+    <apex:form >
+         <apex:pageblock title="accountact Records created today">
+             
+          
+   
+             <apex:repeat value="{!wrplist}" var="aaa" id="theRepeat">
+
+ 
+
+        <apex:outputText value="{!aaa.acc.Name}" id="theValue"/> :::::
+                 <apex:inputcheckbox selected="true"   value="{!aaa.selectaccount}"  /> <br/>
+
+ 
+
+    </apex:repeat>
+         
+        <apex:commandButton reRender="block2" action="{!addthis}" value="clicks" title="click for selects"/>
+        </apex:pageblock>
+        
+        
+         <apex:pageblock title="accountact Records created today" id="block2">
+          <apex:pageBlockTable value="{!wrplist2}" var="aaa">
+
+             <apex:column value="{!aaa.acc.Name}"/>
+                <apex:column value="{!aaa.selectaccount}"/>
+               
+            </apex:pageBlockTable>
+       
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

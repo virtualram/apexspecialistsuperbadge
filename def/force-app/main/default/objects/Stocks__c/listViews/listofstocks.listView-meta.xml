@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>listofstocks</fullName>
+    <columns>Nameofstock__c</columns>
+    <columns>Dailygainer__c</columns>
+    <columns>Weeklygain__c</columns>
+    <columns>Monthlygain__c</columns>
+    <columns>Yearlygain__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>listofstocks</label>
+</ListView>

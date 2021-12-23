@@ -1,0 +1,12 @@
+.THIS {
+}
+
+.THIS.toggle1 {
+    display: none;
+    visibility:hidden;
+}
+
+.THIS.toggle2 {
+    
+    display: inline;
+}

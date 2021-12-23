@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Approval template</name>
+    <style>none</style>
+    <subject>Approval is  pending for {!devlight1973__StudentMaster2__c.devlight1973__Name</subject>
+    <textOnly>Student is {!01I2v000001uILK.00N2v00000F2rOS}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

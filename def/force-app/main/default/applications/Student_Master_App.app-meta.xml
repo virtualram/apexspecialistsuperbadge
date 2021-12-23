@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <description>My demo app</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Student Master App</label>
+    <logo>Salesforce1_Branding_Resources/Complogo.png</logo>
+    <tabs>standard-Chatter</tabs>
+    <tabs>Studentmastervf</tabs>
+    <tabs>StudentMaster__c</tabs>
+    <tabs>StudentMarks__c</tabs>
+    <tabs>StudentActivity__c</tabs>
+    <tabs>google</tabs>
+    <tabs>Regionalaccounts__c</tabs>
+    <tabs>standard-Lead</tabs>
+    <tabs>Expense_Reports__c</tabs>
+    <tabs>University_locations__c</tabs>
+    <tabs>Universitiesvfpage</tabs>
+    <tabs>Accountlightningout</tabs>
+    <tabs>ContactTag__c</tabs>
+</CustomApplication>

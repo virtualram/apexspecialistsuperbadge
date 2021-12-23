@@ -1,0 +1,40 @@
+<apex:page standardController="contact" sidebar="false" extensions="contactextension">
+    <apex:form >
+        <apex:stylesheet value="{!$Resource.css1}" />
+        <apex:messages />
+        <apex:message />
+        <apex:pageMEssage summary="This is contact detail form for new verified banking customers,Please ensure all documents are submitted by customer before entering the data" severity="Error" strength="1"/>
+        <apex:pagemessages />
+        <apex:pageBlock id="counter"  mode="detail" title="{!if($CurrentPage.parameters.id == null,  'Create Contact', 'Edit Contact')}">
+            <apex:pageBlockButtons >
+                
+                <apex:commandButton value="Save" action="{!Save}" />
+                <apex:commandButton value="Cancel" action="{!Cancel}"/>   
+            </apex:pageBlockButtons>
+            <apex:actionRegion >
+                <apex:inputCheckbox label="ShowContactInfo" value="{!togglescreen}" >
+                    <apex:actionSupport event="onclick"    rerender="counter,info" />
+                </apex:inputCheckbox>
+            </apex:actionRegion>     
+            <apex:pageBlockSection Title="Details">
+                <apex:inputField styleClass="h1" value="{!contact.firstname}"/>
+                <apex:inputField value="{!contact.lastname}"/>
+                <apex:inputField value="{!contact.Email}"/>
+                <apex:inputField value="{!contact.Leadsource}"/>
+                <apex:inputField value="{!contact.Accountid}"/>
+                <apex:inputField value="{!contact.Level__c}"/>
+                {!togglescreen}
+            </apex:pageBlockSection>         
+            <!--   <apex:pageBlockSection Title="Contact Info" rendered="{!if($CurrentPage.parameters.showhide == null,  true, false)}">-->
+            <apex:pageBlockSection id="info" Title="Contact Info"  rendered="{!if(togglescreen == true,  true, false)}">
+                <apex:inputField value="{!contact.mobilephone}"/>
+                <apex:inputField value="{!contact.Fax}"/>
+                <apex:inputField value="{!contact.Phone}"/>                
+            </apex:pageBlockSection>
+            <c:VFcomponent myValue="{!contact.lastname}" borderColor="red"/>
+            
+            
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,7 @@
+<apex:page standardController="Account">
+<p>Hello {! $User.FirstName}!</p>
+<p>You are viewing the {! account.name} account.</p>
+<apex:dataList value="{!account.contacts}" var="item">
+<apex:outputText value="{!item.name}"/>
+</apex:dataList>
+</apex:page>

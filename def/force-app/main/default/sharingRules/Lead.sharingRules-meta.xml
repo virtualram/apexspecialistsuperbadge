@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Leadsahringrule1</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Leadsahringrule1</label>
+        <sharedTo>
+            <role>CFO</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Company</field>
+            <operation>equals</operation>
+            <value>EMCwest</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>narenrr@yahoo.com</contactEmail>
+    <label>Jenkinsapp</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <certificate>MIIC9jCCAd4CCQDKcbDQ9jnIuTANBgkqhkiG9w0BAQsFADA9MQswCQYDVQQGEwJJTjELMAkGA1UECBMCTUgxITAfBgNVBAoTGEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDAeFw0xOTAyMDUwNjU3MjZaFw0yMDAyMDUwNjU3MjZaMD0xCzAJBgNVBAYTAklOMQswCQYDVQQIEwJNSDEhMB8GA1UEChMYSW50ZXJuZXQgV2lkZ2l0cyBQdHkgTHRkMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAprx/6gvudlQafM0XwqrZ/RxiuPbf6nHtKIfwjmFurcOXMm2XvFk8BboMwljgKzf8fwDb3ZNX4uWu2gEnXFqFWX4wSlX930Sp7I0Sz4IekIRhVCg3aQ3Zm106gyh9fiSCVn176/jSIRS4bUpkBWFAa5XtxRJ2Koh9xacLGTXz1+XtxUceaGo3P5MsT2l2HD0O77DEyBtknQb0Ls0X4xgVoFyydXpgc17ARk3xctWXz6D7uc3eBX8EeKWcDvozfY8ocoLXaUOxhxuTZzgaU1iPbXk1TlRB6DBvoq0dsm1NKMpFQogLteCxItkJCIiJObvzMx1uuDLYEJfh8mQbRdBagwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCjtHpxZEvklvoWLt2m8CDxS0d/qH7poll9mjPOqvoGdGhnCHsc+/kVFv2xR0Z2eZpWBvpEI4jUk8KXixRPUlBV4hErC3si8CbYyNhTQJC5OC7vZ1SwTL2UGTsco97e1Z43Q84F3sqOsmM6AaR791dy6NjkWfuznVdkDhyS2DV76zGNTWJZK0D94L6oz89S8j3Lmapz0lTQG5VtCBNlJyf2AI86mLYapgc3kmuJACokpJPZ6fSH/Nk0fmSlsPbsFYi8d4Gq0NdcL7z7YXfNhTjnbY2BapXUOtv9tiI992G1yCCLkTDmraVuowuZR3CPHkeaL9Z0+URB5YEiRP5c6I4l</certificate>
+        <consumerKey>3MVG9Y6d_Btp4xp7zpH04V6xgnOpztNUGEFCnMv9LoW0_EtzEkeeZy6zHUK3KxbGipNHLwb6FukYeiCI8Rz5p</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Basic</scopes>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>Universityprofile</profileName>
+    <profileName>EMCAdmin</profileName>
+    <profileName>System Administrator</profileName>
+</ConnectedApp>

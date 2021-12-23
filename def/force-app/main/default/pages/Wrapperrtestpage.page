@@ -1,0 +1,23 @@
+<apex:page standardcontroller="contact" extensions="testwrappercontroller" tabStyle="Contact">
+    <apex:form >
+  <apex:pageBlock >
+  <apex:pageBlockSection title="Section" columns="2"/>
+      <apex:pageBlockTable value="{!wpl}" var="cw">  
+          <apex:column >
+         </apex:column>
+           <apex:column headerValue="Name">
+         <apex:inputfield value="{!cw.coo.lastname}" rendered="true"/>  
+          </apex:column>         
+           <apex:column headerValue="Checked">
+          <apex:inputCheckbox value="{!cw.selected1}" rendered="true"/>  
+          </apex:column>
+      </apex:pageBlockTable>
+     <apex:pageBlockButtons >
+             <apex:commandButton value="Save" action="{!save}"/>
+          <apex:commandButton value="Delete" action="{!delete}"/>
+        </apex:pageBlockButtons>
+    </apex:pageBlock>
+    
+    </apex:form>
+   
+</apex:page>

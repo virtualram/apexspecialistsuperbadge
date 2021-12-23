@@ -1,0 +1,13 @@
+<aura:component >
+
+    <!-- dont get confused- type is name of event and name is type of event-->
+     <aura:attribute name="Dxyz" type="String" />
+
+         <aura:registerEvent name="cmpEvent" type="c:ceEvent"/>
+    
+    <h1>Simple Component Event Sample</h1>
+    <p><ui:button label="Click here to fire a component event"
+        press="{!c.fireComponentEvent2}" />
+    </p>
+    <p> Data from parent component {!v.Dxyz}</p>
+</aura:component>

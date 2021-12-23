@@ -1,0 +1,14 @@
+<apex:page Standardcontroller="Candidate__c" recordSetVar="reclist">
+  
+  
+  Hello World  {!$User.Username}
+  <apex:pageBlock title="Candidates" tabStyle="Account">
+  <apex:pageblockTable value="{!reclist}" var="tablevar"  >
+   <apex:column value="{!tablevar.NAme}"/>
+      <apex:column value="{!tablevar.Skill__c}"/>  
+ 
+  </apex:pageblockTable>
+  </apex:pageBlock>
+
+  
+</apex:page>

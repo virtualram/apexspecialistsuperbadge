@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+   
+   
+     <aura:attribute name="lat" type="double" default="10"/>
+      <aura:attribute name="long" type="double" default="10"/>
+     <ui:inputNumber aura:id="lat1" label="Latitude" value="{!v.lat}"/>
+    <ui:inputNumber aura:id="long1" label="Longitude" value="{!v.long}"/>
+    <ui:button aura:id="button" buttonTitle="FireMapevent"  label="Click me" press="{!c.myAction}"/>
+    </aura:component>

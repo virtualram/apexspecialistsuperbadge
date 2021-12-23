@@ -1,0 +1,14 @@
+<apex:page >
+<head>
+    
+
+    <apex:includeScript value="{!$Resource.testjs}"/>
+    </head>   <body>
+    <apex:form >
+       <apex:pageBlock >
+         
+    <apex:commandButton styleClass="" value="Alert Me" onclick="loadedjs();"  />
+    
+        </apex:pageBlock>   </apex:form></body>
+       
+</apex:page>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Welcome Email Verion100</name>
+    <style>none</style>
+    <subject>Welcome to our University</subject>
+    <textOnly>Hi   {!01I2v000001uILK.Name} ,   Welcome to our university ,Please check the attachment for your onboarding details. If you have any queries pls call : {!01I2v000001uILK.OwnerPhone}   Thanks, {!01I2v000001uILK.OwnerFullName} Onboarding Staff</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

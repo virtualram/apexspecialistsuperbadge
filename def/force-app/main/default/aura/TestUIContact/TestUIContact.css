@@ -1,0 +1,19 @@
+.THIS.changeMe {
+    background-color:Red;
+    width:200px;
+    color: blue;
+}
+
+.THIS.colorme{
+      font: italic bold 12px/30px Georgia, serif;
+     color:blue;
+}
+.THIS.toggle1 {
+    display: none;
+    visibility:hidden;
+}
+
+.THIS.toggle2 {
+    
+    display: inline;
+}

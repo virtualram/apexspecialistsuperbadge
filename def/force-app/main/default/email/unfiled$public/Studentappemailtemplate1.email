@@ -1,0 +1,7 @@
+Hello,
+
+
+New Student Record Created   
+Details:
+Name :{!StudentMaster__c.Name}
+Country:{!StudentMaster__c.Country__c}

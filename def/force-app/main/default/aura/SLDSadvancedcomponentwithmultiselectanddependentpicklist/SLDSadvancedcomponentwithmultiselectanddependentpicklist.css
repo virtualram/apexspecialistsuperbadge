@@ -1,0 +1,43 @@
+.THIS.hideme {
+    display : none;
+}
+
+
+.THIS.showme {
+    display : block;
+}
+
+.THIS.wrapper {
+  margin-right: 200px;
+}
+.THIS.content {
+  float: left;
+  width: 100%;
+  background-color: #CCF;
+}
+.THIS.sidebar {
+  float: right;
+  width: 200px;
+  margin-right: -200px;
+  background-color: #FFA;
+}
+.THIS.multi {
+  float: right;
+  width: 200px;
+  margin-right: -200px;
+  background-color: #FFA;
+}
+.THIS .Required {
+   border-left: solid;
+    border-left-color: #ff0000 ;
+}
+.THIS.selectsize{
+    
+    height: 200px;
+    width: 30%;
+    background-color: powderblue;
+}
+.THIS.span1{
+width:100px;
+height: 100px;
+}

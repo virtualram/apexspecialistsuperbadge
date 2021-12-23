@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Created by Lightning App Builder</description>
+    <flexiPage>ACcounts_app_page</flexiPage>
+    <label>ACcounts app page</label>
+    <motif>Custom57: Building Block</motif>
+</CustomTab>

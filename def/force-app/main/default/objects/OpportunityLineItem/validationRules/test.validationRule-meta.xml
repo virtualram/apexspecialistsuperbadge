@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>test</fullName>
+    <active>false</active>
+    <errorConditionFormula>$User.MobilePhone &lt;&gt;Product2.Description</errorConditionFormula>
+    <errorMessage>mobile of user does not mathc descript</errorMessage>
+</ValidationRule>

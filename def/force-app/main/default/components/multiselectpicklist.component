@@ -1,0 +1,16 @@
+<apex:component >
+    <apex:attribute name="rightboxatt" type="String" description="TODO: Describe me"/>
+    <apex:attribute name="leftboxatt" type="String" description="TODO: Describe me"/>
+    <apex:attribute name="rightoptions" type="String" description="TODO: Describe me"/>
+    <apex:attribute name="leftoptions" type="String" description="TODO: Describe me"/>
+    <apex:attribute name="width" type="String" description="TODO: Describe me"/>
+    <apex:attribute name="size" type="String" description="TODO: Describe me"/>
+    <apex:attribute name="rightoptions1" type="String" description="TODO: Describe me"/>
+    <apex:attribute name="rightlabel" type="String" description="TODO: Describe me"/>
+    <apex:attribute name="leftoptions1" type="String" description="TODO: Describe me"/>
+    <apex:attribute name="leftlabel" type="String" description="TODO: Describe me"/>
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new Component: multiselectpicklist
+  <!-- End Default Content REMOVE THIS -->
+</apex:component>

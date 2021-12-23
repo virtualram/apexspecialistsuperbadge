@@ -1,0 +1,27 @@
+<aura:component>
+    <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+        <lightning:recordEditForm aura:id="recordViewForm" 
+                                     recordId="0019000001bgCocAAE"
+                                     
+                                     objectApiName="Account">
+            <lightning:messages />
+            <lightning:inputField fieldName="Name" />
+            <lightning:inputField fieldName="AccountNumber" />
+            <lightning:inputField fieldName="Type" />
+            <lightning:inputField fieldName="Phone" />
+           
+            <lightning:button aura:id="submit" type="submit" label="Update record" class="slds-m-top_medium" />
+            </lightning:recordEditForm>
+    </div>  
+    <!-- Record Display -->    
+    <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+        <lightning:recordViewForm recordId="0019000001bgCocAAE" objectApiName="Account">
+        <div class="slds-box">
+             <lightning:inputField fieldName="Name" />
+            <lightning:inputField fieldName="AccountNumber" />
+            <lightning:inputField fieldName="Type" />
+            <lightning:inputField fieldName="Phone" />
+</div>
+    </lightning:recordViewForm>
+    </div>   
+</aura:component>

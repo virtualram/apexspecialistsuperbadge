@@ -1,0 +1,42 @@
+<aura:component controller="ContactController1" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" >
+    <aura:attribute name ="show" type="boolean" default="false"/>
+    <aura:attribute name="contact" type="Contact" default="{'sobjectType': 'Contact'}"/>
+    <aura:handler event="aura:locationChange" action="{!c.locationChange}"/>
+         <aura:if isTrue="{!v.show}">   
+      <!--  <div class="details">-->
+         <!--    <h1>{!v.contact.Name}</h1>-->
+            <!-- <h3>{!v.contact.Account.Name}</h3>-->
+       <!--  <h3>{!v.contact.Title}</h3>-->
+         <!--    <p>{!v.contact.Phone}</p>-->           
+        <!--  </div>-->
+        
+        <div class="demo-only" style="width: 30rem;"  renderred="{!v.show}">
+            <article class="slds-tile slds-media">
+                <div class="slds-media__figure">
+                    <span class="slds-avatar slds-avatar_circle slds-avatar_medium">
+                        <img alt="" src="/assets/images/avatar2.jpg" title="Lexee L. Jackson avatar" />
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h3 class="slds-tile__title slds-truncate" ><a href="javascript:void(0);"></a></h3>
+                    <div class="slds-tile__detail">
+                        <dl class="slds-list_horizontal slds-wrap">
+                            <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Contact Name:</dt>
+                            
+                            
+                            <dd class="slds-item_detail slds-truncate" title="Description for first label"><a href="{! $Site.siteUrlPrefix + '/' + v.contact.Id}">{!v.contact.Name}</a></dd>
+                            <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">Contact Phone:</dt>
+                            <dd class="slds-item_detail slds-truncate" title="Description for second label">{!v.contact.Phone}</dd>
+                             <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">Contact Image:</dt>
+                        <ui:outputRichText aura:id="outputRT" value="{!v.contact.devlight1973__picture__c}" />
+                           <!-- <div class="uiOutputRichText" linkify="true" >
+                         <aura:unescapedHtml value="{!v.contact.devlight1973__picture__c}"/>
+                       </div>-->
+                            
+                        </dl>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </aura:if>
+</aura:component>

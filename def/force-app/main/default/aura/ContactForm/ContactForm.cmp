@@ -1,0 +1,51 @@
+<aura:component controller="ContactLightning" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute type="String" name="rollupaccid"/>
+    <aura:attribute name="contactObj" type="Contact" default="{'sobjectType':'Contact'}"/>
+    <aura:attribute name="accid" type="String" />
+    <div class="demo-only" style="width:440px">
+  <div class="slds-form slds-form_compound">
+      
+      
+    <fieldset class="slds-form-element">
+      <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Location</legend>
+      <div class="slds-form-element__group">
+        <div class="slds-form-element__row">
+          <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-02">Name</label>
+             <ui:inputText class="slds-input"   value="{!v.contactObj.Name}"/>
+          </div>
+          <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-02">Adhar</label>
+             <ui:inputText class="slds-input"   value="{!v.contactObj.devlight1973__Aadhar__c}"/>
+          </div>
+            
+        </div>
+      </div>
+    </fieldset>
+      
+      
+       <!-- <fieldset class="slds-form-element">
+      <legend class="slds-form-element__label slds-form-element__legend slds-text-title_caps">Location</legend>
+      <div class="slds-form-element__group">
+        <div class="slds-form-element__row">
+                    
+             <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-02">Account</label>
+                 <ui:inputText class="slds-input"   value="{!v.rollupaccid}" />
+          </div>
+            
+            
+          <div class="slds-form-element slds-size_1-of-2">
+            <label class="slds-form-element__label" for="input-02">Account search</label>
+                <c:SearchKeyChange2 rollupaccid="{!v.rollupaccid}"/>/>
+          </div>   
+            </div>
+      </div>
+            
+           
+    </fieldset>-->
+       </div>
+      </div>
+    
+     <ui:button class="slds-button slds-button--brand" aura:id="button" label="Save1" press="{!c.save}"/>
+</aura:component>

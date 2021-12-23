@@ -1,0 +1,8 @@
+.THIS.span1 {
+    width:100px;
+    height: 100px;
+}
+.THIS .Required {
+   border-left: solid;
+    border-left-color: #ff0000 ;
+}

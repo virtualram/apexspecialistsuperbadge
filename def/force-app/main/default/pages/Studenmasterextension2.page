@@ -1,0 +1,28 @@
+<apex:page standardController="StudentMaster__c"  extensions="studmastextension">
+<apex:pageblock title="Welcome {!$User.FirstName} Student Master details of {!StudentMaster__c.name} "> 
+  
+     <apex:pageBlockTable value="{!StudentMaster__c}" var="studmast" >
+        <apex:column value="{!studmast.Department__c}"/> 
+        <apex:column value="{!StudentMaster__c.name}"/>
+        
+        <!--apex:column value="{!studmast.NumofSubjectsPasssed__c}"/--> 
+         <!--apex:column value="{!studmast.NumSubjectFailed__c}"/-->
+         <!--apex:column value="{!studmast.AverageMarsk__c}"/--> 
+      </apex:pageBlockTable>
+    </apex:pageblock>
+
+<apex:pageblock title="Marks" rendered ="{!if($CurrentPage.parameters.xyz <> null , true, false)}">    
+    <apex:pageBlockTable value="{!StudentMaster__c.studentmarks__r}" var="stud"  >
+  
+        <apex:column value="{!stud.name}" /> 
+        <apex:column value="{!stud.Subjects__c}"/>
+        <apex:column value="{!stud.MArks__c}"/>
+        
+        
+       </apex:pageBlockTable>
+    </apex:pageblock>
+  <apex:relatedList list="devlight1973__studentmarks__r" />
+ <apex:pageblock >{!WelcomeMsg}</apex:pageblock>
+  <apex:pageblock >{!myvariable}</apex:pageblock>
+    
+</apex:page>

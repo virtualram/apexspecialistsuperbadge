@@ -1,0 +1,19 @@
+<apex:page Controller="orinsert">
+ <apex:sectionHeader title="offering release" subtitle="Step 1"/>
+   <apex:form >
+   <apex:pageBlock title="Customer Information" mode="edit">
+   <apex:pageBlockButtons >
+   <apex:commandButton action="{!Save}" value="Save" immediate="true"/>
+   </apex:pageBlockButtons>
+   
+   <table>
+   <tr><td>
+   <apex:outputLabel >Name</apex:outputLabel></td>
+   <td>  <apex:inputField id="Name" value="{!offerreleaseins.Release_Name_Text__c}" required="false" /></td></tr>
+   
+<tr><td><apex:outputLabel >Street</apex:outputLabel> </td>
+<td> <apex:inputField id="accountSite" value="{!offerreleaseins.Release_Version_Text__c}"/></td></tr>   
+</table>
+    </apex:pageBlock>
+   </apex:form>
+</apex:page>

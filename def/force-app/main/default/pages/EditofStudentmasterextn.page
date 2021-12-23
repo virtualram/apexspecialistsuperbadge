@@ -1,0 +1,48 @@
+<!--<apex:page standardController="devlight1973__StudentMaster__c" extensions="studmastextension,extexample">-->
+<apex:page standardController="StudentMaster__c" lightningStylesheets="true" extensions="studemastextension1,extexample">
+    
+    <apex:form >
+        <apex:pageBlock title="Edit Student Master">
+            <apex:pageBlockSection columns="2" >
+                <!--<apex:inputtext label="NAME" value="{!StudentMaster__c.Name}" id="Name1" />
+                <br/> <br/> 
+                <apex:inputtext label="AGe" value="{!Age__c}" id="age1" />
+                <br/> <br/>   -->
+                <apex:inputField value="{!StudentMaster__c.Name}" id="Name" />
+                <br/> <br/> 
+                <apex:inputField value="{!StudentMaster__c.Department__c}" id="Department" />
+                <br/> <br/>   
+                <apex:inputField value="{!StudentMaster__c.DOJ__c}" id="DOJoining" />
+                <br/> <br/> 
+                <apex:inputField value="{!StudentMaster__c.Age__c}" id="Age" />
+                <br/> <br/> 
+                <br/> <br/>
+                <!--<apex:commandButton action="{! edit }" value="Edit" />--><br/> 
+                <apex:commandButton action="{! save }" value="Save" />
+                <br/> <br/> 
+              <!--   <apex:commandButton value="redirect" action="{!URLFOR($action.StudentMaster__c.new) }" />   <br/>
+                <apex:commandButton action="{! Cancel }" value="Cancel" />   <br/>-->
+                <apex:commandButton styleClass="button"  action="{!saveandredirect }" value="SaveandRedirect" rendered ="{!if($CurrentPage.parameters.id <> null , true, false)}"/>
+               <!-- <apex:commandButton action="{!saveandredirect2 }" value="SaveandRedirect2" />-->
+                
+            </apex:pageBlockSection>
+        </apex:pageBlock>  
+        <apex:pageblock title="Marks" >    
+            <apex:pageBlockTable value="{!StudentMaster__c.studentmarks__r}" var="stud" >          
+                <apex:column value="{!stud.name}"/>    
+                
+            </apex:pageBlockTable>
+        </apex:pageblock> 
+        
+        <apex:pageblock title="Marks" >
+            
+            {!welcomemsg} + {! DateStringProperty}
+        </apex:pageblock>
+        
+        
+        
+        
+    </apex:form>
+    
+    
+</apex:page>

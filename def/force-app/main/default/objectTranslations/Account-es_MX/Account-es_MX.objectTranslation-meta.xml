@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Account (Marketing) Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Account (Sales) Layout</layout>
+        <sections>
+            <label></label>
+            <section>Account Online Demo Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Dell company fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>EMC Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Account Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Section</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Digital Account layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Digital layout</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>EMC_retail</layout>
+        <sections>
+            <label></label>
+            <section>Account Online Demo Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Dell company fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>EMC Fields retail screen</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>EMC_wholesale</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>EMC Fields retail screen</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Hotel SBU Accounts</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Dell Company fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Hotel SBU  Accounts</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>VF</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Investment banking account layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Investment Banking</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Mall Account Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>New hotel page</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Hotel</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Section</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Warehouse Schema Account Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>new investment bank</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>investment bank</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>test</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>New Section</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Contactlds</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>CreateAccountforRevature</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Createaccwithcomp</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Createattachmentwithrefhasrecordid</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Deletelightningaction</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>EditAccount</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Quickactionforaccountformcomponent</name>
+    </quickActions>
+    <recordTypes>
+        <label></label>
+        <name>AccountSales</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Digital_accounts</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>EMC_Retail</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>EMC_wholesale</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>HotelAccounts</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Investmentbank</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Mall_Recordtype</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>University</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Accountnamecannotbechanedineditmode</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Annualrevenuecheck</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Check_field_values</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Cityerror</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Validationrandom</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>Billing</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Billing_WarehouseSchema</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Createaccountfrom_JS</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>SBQQ__Amend_Assets</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>SBQQ__Renew_Assets</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>apexjavascript</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>editvf</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>testacct</name>
+    </webLinks>
+    <workflowTasks>
+        <name>New_account_creation_triggered</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description></description>
+        <name>how_are_you</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description></description>
+        <name>testtestt</name>
+        <subject></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

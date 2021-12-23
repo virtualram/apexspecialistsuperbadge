@@ -1,0 +1,32 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<div style="height: 900px;">
+  <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-labelledby="modal-heading-id-01" aria-describedby="modal-content-id-01" aria-modal="true">
+    <div class="slds-modal__container">
+      <header class="slds-modal__header">
+        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+          
+          <span class="slds-assistive-text">Close</span>
+        </button>
+        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+         
+          <span class="slds-assistive-text">Close</span>
+        </button>
+        <h2 id="modal-heading-id-01" class="slds-text-heading_medium slds-hyphenate">Geo Code: 37°48'08.3"N 122°15'55.2W</h2>
+      </header>
+      <div class="slds-modal__content" id="modal-content-id-01">
+        <div class="slds-grid">
+          <div class="slds-col">
+            <div class="slds-map">
+              <iframe id="GoogleMapID" title="Google Maps iframe" src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20san%20francisco&amp;key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc" style="border: 0px;"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="slds-modal__footer">
+        <button class="slds-button slds-button_brand">Open in Google Maps</button>
+      </footer>
+    </div>
+  </section>
+  <div class="slds-backdrop slds-backdrop_open"></div>
+</div>
+</aura:component>

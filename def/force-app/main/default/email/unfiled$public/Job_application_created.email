@@ -1,0 +1,6 @@
+Hello,
+
+A new    {!Job_Application__c.Name}        has been created
+
+Thanks
+{!User.FirstName}

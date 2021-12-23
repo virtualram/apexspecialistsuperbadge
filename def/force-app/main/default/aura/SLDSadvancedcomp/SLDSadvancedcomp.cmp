@@ -1,0 +1,139 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,lightning:actionOverride,force:hasRecordId" access="global" >
+  <!-- <ltng:require styles="/resource/SLDS202/assets/styles/salesforce-lightning-design-system.css" /> -->
+    <aura:attribute name="Wpaobj" type="Account" default="{'sobjectType':'Account'}"/> 
+  <!--  <force:recordData aura:id="forceRecordCmp" />  -->
+    <aura:attribute name="objInfo" type="string" default="Account" description="store object Info." /> 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="Base" type="String"  access="global"/>
+    <aura:attribute name="Contact" type="String" access="global"/>
+    <aura:attribute name="Resource" type="String"  access="global"/>
+    <aura:attribute name="RelationshipEntity" type="String" access="global"/>
+    <aura:attribute name="Opportunity" type="String" access="global"/>
+    <aura:attribute name="Location" type="String" access="global"/>
+    <aura:attribute name="TravelRequired" type="Boolean" access="global"/>
+    <aura:attribute name="BernsteinOffice" type="String" access="global"/>
+    <!-- added for dependenet and controlling field -->
+    <aura:attribute name="depnedentFieldMap" type="map" description="store controller(key)--> dependent(values) picklist value as a map." />
+    <aura:attribute name="isDependentDisable" type="boolean" default="true" description="use for, make disbale depandent field." />
+    <aura:attribute name="Type" type="String" access="global"/>
+    <aura:attribute name="Category" type="String" access="global"/>
+      
+    <div class="slds-page-header">
+      
+        <h1 title="Rohde Corp - 80,000 Widgets" class="slds-page-header__title slds-truncate slds-align-middle"><B>New WPA Request</B></h1>
+    </div>
+    <div style="background-color:#f0f8ff" class="slds-card">  
+    <h3 style="background-color:#C0C0C0" class="slds-section-title--divider"> <b>Information</b></h3>
+  <fieldset class="slds-form--compound">
+      <div class="slds-grid">
+       <div class="slds-col slds-size--1-of-3">
+   <!--   <div> -->  
+       <c:multiSelectpicklistVersion2 childAttr4="{!v.Contact}" />   
+     <!-- </div> --> 
+    </div>
+       <div class="slds-col slds-size--1-of-3">
+        <div class="slds-form--vertical">
+          <!-- <c:customLookup3 childAttr3="{!v.Base}" />-->
+        </div>  
+     </div>   
+ 
+  <div class="slds-form-element__group">
+   
+      <div class="slds-col slds-size--1-of-3">
+      </div>
+  </div>
+      </div>
+</fieldset >
+        <div>
+        <br></br>
+        </div>
+    <!-- DIv Area for dependent and controlling field -->
+      <h3 style="background-color:#C0C0C0" class="slds-section-title--divider"> <b>Meeting Location</b></h3>
+        <fieldset class="slds-form-element">
+          <!--Controller Field-->
+            
+            <div class="slds-grid">
+              <div class="slds-col slds-size--1-of-3">
+                  <label class="slds-form-element__label" for="select-01"><b>Type</b></label>
+            		<div class="slds-select_container">
+                		<ui:inputSelect required="true" class="slds-select" aura:id="SelectType"  change="{!c.onControllerFieldChange}" />
+            		</div>
+              </div>
+              
+                <div class="slds-col slds-size--1-of-3">
+                <label class="slds-form-element__label" for="select-02"><b>Category</b></label>
+            <div class="slds-select_container" >
+                <ui:inputSelect aura:id="conState" disabled="{!v.isDependentDisable}" class="slds-select" change="{!c.onDependentFieldChange}" />
+            </div>
+              <div class="slds-form-element slds-size_1-of-3">
+                  
+              </div> 
+                </div>
+           </div>
+      
+      </fieldset> 
+        
+       <div>
+        <br></br>
+        </div>
+      <!-- Div CLosed Here -->
+        <fieldset class="slds-form--compound is-required">
+        
+  				<div class="slds-grid">
+            <div class="slds-col slds-size--1-of-3">
+                   <label class="slds-form-element__label" for="select-01"><b>Resource Requested</b></label>
+                   <ui:inputText class="Required" value="{!v.Resource}" required="true" /> 
+            </div>
+            <div class="slds-col slds-size--1-of-3">
+                    <label class="slds-form-element__label" for="select-01"><b>Travel Required</b></label>      
+                    <ui:inputCheckbox value="{!v.TravelRequired}"/>
+            </div>
+            <div class="slds-col slds-size--1-of-3">
+            
+            </div>
+                </div>
+        
+		 </fieldset>
+        <div>
+        <br></br>
+        </div>
+      <!-- Field Set for Location and Berstein Office -->  
+   <fieldset class="slds-form-element">
+       <div class="slds-grid">
+         <div class="slds-col slds-size--1-of-3">
+                    <label class="slds-form-element__label" ><b>Location</b></label>
+                   <div class="slds-select_container">
+                    <ui:inputSelect aura:id="selectlocation" class="slds-select" change="{!c.onSelectChange}" />
+                   </div>
+          </div>
+      <div class="slds-col slds-size--1-of-3">
+          <label class="slds-form-element__label" ><b>Bernstein Office</b></label>
+      <div class="slds-select_container">
+          <ui:inputSelect aura:id="selectOffice" class="slds-select" change="{!c.onSelectChange}" />
+      </div>
+   <div class="slds-col slds-size--1-of-3">
+      </div>
+      </div>
+      </div>
+   </fieldset> 
+        <div>
+        <br></br>
+        </div>
+         <fieldset class="slds-form-element">
+       <div class="slds-grid">
+         <div class="slds-col slds-size--1-of-3">
+                    
+          </div>
+      <div class="slds-col slds-size--1-of-3">
+         
+   <div class="slds-col slds-size--1-of-3">
+       <button type="button" class="slds-button slds-button--neutral">Cancel</button>
+      <ui:button class="slds-button slds-button--brand" aura:id="button" label="Save" press="{!c.save}"/>
+<!--/div-->
+      </div>
+      </div>
+      </div>
+   </fieldset> 
+      
+    </div> 
+</aura:component>

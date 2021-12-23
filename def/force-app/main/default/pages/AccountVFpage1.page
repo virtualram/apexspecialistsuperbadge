@@ -1,0 +1,22 @@
+<apex:page standardController="Account" showHeader="false" sidebar="false" extensions="AccountVFpage1extension" >
+    <apex:form >
+        <apex:pagemessages />
+   <apex:pageblock title="Account Detail" >
+       
+      <apex:pageblocksection collapsible="true" title="Enter Account information">
+       
+          <apex:inputfield value="{!Account.NAme}"/>
+          <apex:inputfield value="{!Account.AccountNumber}"/>       
+       
+       </apex:pageblocksection>
+       
+       <apex:pageBlockButtons location="bottom" >
+       <apex:commandButton value="Save"  action="{!Save}"/>
+        <apex:commandButton value="Cancel"  action="{!Cancel}"/>
+           <apex:commandButton value="Extensionsave"  action="{!extensionsave}"/>
+       </apex:pageBlockButtons>
+    </apex:pageblock>
+    
+    </apex:form>
+    DAta created in extension {!extvar1}
+</apex:page>

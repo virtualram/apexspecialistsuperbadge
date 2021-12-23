@@ -1,0 +1,9 @@
+<apex:page showHeader="false" title="HelloWorldPage" >
+    <apex:pageBlock title="Welcome To WellsFargo" tabstyle="Account">
+    <apex:pageBlockSection title="Training" >
+        Welcome to Visualforce pages {!$User.FirstName}
+        
+        
+       </apex:pageBlockSection> 
+        </apex:pageBlock>   
+</apex:page>

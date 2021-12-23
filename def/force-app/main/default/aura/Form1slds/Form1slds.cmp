@@ -1,0 +1,51 @@
+<aura:component >
+    
+    <fieldset class="slds-form-element slds-form-element_compound">
+<legend class="slds-form-element__legend slds-form-element__label">Contact Details</legend>
+<div class="slds-form-element__control">
+<div class="slds-form-element__row">
+<div class="slds-size_1-of-3">
+<div class="slds-form-element">
+<label class="slds-form-element__label" for="input-01">Last Name</label>
+<div class="slds-form-element__control">
+<input type="text" id="input-01" class="slds-input" />
+</div>
+</div>
+</div>
+<div class="slds-size_1-of-3">
+<div class="slds-form-element">
+<label class="slds-form-element__label" for="input-02">Email</label>
+<div class="slds-form-element__control">
+<input type="text" id="input-02" class="slds-input" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</fieldset>
+	
+    <fieldset class="slds-form-element slds-form-element_compound"><legend class="slds-form-element__legend slds-form-element__label">Location</legend>
+<div class="slds-form-element__control">
+<div class="slds-form-element__row">
+<div class="slds-size_1-of-3">
+<div class="slds-form-element">
+<label class="slds-form-element__label" for="input-01">Department</label>
+<div class="slds-form-element__control">
+<input type="text" id="input-01" class="slds-input" />
+</div>
+</div>
+</div>
+<div class="slds-size_1-of-3">
+<div class="slds-form-element">
+<label class="slds-form-element__label" for="input-02">Longitude</label>
+<div class="slds-form-element__control">
+<input type="text" id="input-02" class="slds-input" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</fieldset>
+	<button class="slds-button slds-button_brand">Save	</button>
+    <button class="slds-button slds-button_brand">Cancel</button>
+</aura:component>

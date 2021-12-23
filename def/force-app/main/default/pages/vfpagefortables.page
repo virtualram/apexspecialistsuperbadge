@@ -1,0 +1,23 @@
+<apex:page standardController="Position__c" recordsetvar="x">
+
+       <apex:pageBlock title="Hello {!$User.FirstName}!">
+
+         
+
+       </apex:pageBlock>
+
+       <apex:pageBlock title="Postition">
+
+          <apex:pageBlockTable value="{!x}" var="p">
+
+             <apex:column value="{!p.Name}"/>
+
+             <apex:column value="{!p.Location__c}"/>
+
+             <apex:column value="{!p.Status__c}"/>
+
+          </apex:pageBlockTable>
+
+       </apex:pageBlock>
+
+    </apex:page>

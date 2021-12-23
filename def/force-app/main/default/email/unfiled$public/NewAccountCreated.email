@@ -1,0 +1,2 @@
+New Account with Id :{!Account.Id} created </br>
+Name of account is : {!Account.Name}

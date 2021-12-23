@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<lightning:recordEditForm aura:id="recordViewForm" 
+                          recordId="0039000002LVS4T"
+                          
+                          objectApiName="Contact">
+    <lightning:messages />
+    <!--Other fields here-->
+    <lightning:inputField fieldName="devlight1973__Countries__c" />
+    <lightning:inputField fieldName="devlight1973__States__c" />
+    <lightning:button aura:id="submit" type="submit" label="Update record" class="slds-m-top_medium"/>
+</lightning:recordEditForm>
+</aura:component>

@@ -1,0 +1,33 @@
+<apex:page >
+ <!-- lightning out pages are auto styled in slds <apex:slds /> -->
+
+    <apex:includeScript value="/lightning/lightning.out.js" />
+    <apex:includeLightning />
+    <script>
+        $Lightning.use("c:Accountsldsapp", function() {
+            $Lightning.createComponent(
+                "c:Accountsldsformatpagecmp",
+                {},
+                "AccountApp",
+                function(cmp) {
+                    //  debugger;
+                 $A.eventService.addHandler({
+                event: 'force:navigateToSObject',
+                handler: function(event) {
+              //  console.log('inside1');
+               
+                 alert(event.getParam('scope'));
+                    
+                    // if (event.getParam('scope') === 'Account') {
+                    // alert('hi'+event.getParam('scope') );
+                       //    console.log('inside 2');
+                    //      window.location = '{!URLFOR($Action.Account.Tab, $ObjectType.Account)}';
+                    window.location = '{!URLFOR('/', $ObjectType.Account)}';
+                    //}                    
+                }
+             });                    
+          });
+       });
+    </script>    
+    <div id="AccountApp"></div>
+</apex:page>

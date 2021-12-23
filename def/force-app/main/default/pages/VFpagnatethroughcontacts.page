@@ -1,0 +1,23 @@
+<apex:page controller="PaginationController" >
+    <apex:form >
+   	<apex:pageblock id="contactTable">
+    <apex:pageBlockTable value="{!contactlist}" var="contacts" >
+       <apex:column title="Contact Name"> <!--value="{!contacts.name}" />-->
+       <!-- <apex:actionRegion> -->
+            <!-- <apex:outputtext label="name" value="{!contacts.Name}"> </apex:outputtext> -->
+           <apex:inputtext label="name" value="{!contacts.lastname}" > 
+            <apex:actionsupport event="onchange" action="{!updatecontact}" reRender="contactTable" >
+ 				<apex:param name="contactid" assignto="{!contactid}" value="{!contacts.Id}"> </apex:param> 
+                <apex:param name="contactname" assignto="{!contactname}" value="{!contacts.lastname}"> 
+                </apex:param> 
+ 	      </apex:actionsupport>  
+             </apex:inputtext>   
+           <!--  </apex:actionRegion>-->
+        </apex:column>
+     
+    </apex:pageBlockTable>
+ <apex:pageBlockButtons > <apex:commandbutton value="next" action="{!nextpage}" /></apex:pageBlockButtons>   
+ </apex:pageblock>
+ </apex:form>
+   
+</apex:page>

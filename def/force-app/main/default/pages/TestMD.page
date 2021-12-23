@@ -1,0 +1,3 @@
+<apex:page standardController="Offering__c">
+    <apex:relatedList list="Offering_Releases__r" />
+</apex:page>

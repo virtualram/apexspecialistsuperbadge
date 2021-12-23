@@ -1,0 +1,29 @@
+<aura:component controller="Accountlightning" implements="lightning:actionOverride,force:lightningQuickAction,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,lightning:actionOverride,force:hasRecordId" access="global" >
+	  
+   <!-- <aura:handler name="init" value="{!this}" action="{!c.doInit}" />-->
+    <aura:dependency resource="markup://force:navigateToSObject" type="EVENT"/>
+   
+    <!--needs idd or recorid using hasrecordid-->
+   
+	<aura:attribute name="accObj" type="Account" default="{'sobjectType':'Account'}"/>
+     <aura:attribute name="options" type="List" />
+    <aura:attribute name="selectedtype" type="String"/>
+    <aura:attribute name="selectedValue" type="String" default="Red"/>
+     <aura:attribute name="enabled" type="Boolean" default="true"/>
+  <aura:attribute  name="hideunhide" type="Boolean" default="true"/>
+
+   
+      
+            <label >Name </label>
+            <ui:inputText class="slds-input"  value="{!v.accObj.Name}"/>              
+                   
+          
+            <label >AccountNumber</label>
+             <ui:inputText class="slds-input"   value="{!v.accObj.AccountNumber}"/>
+      
+     <lightning:button  type="button" class="slds-button slds-button--neutral">Cancel</lightning:button>
+      <ui:button class="slds-button slds-button--brand" aura:id="button" label="Save1" press="{!c.save}"/>
+       <lightning:button class="slds-button slds-button--neutral" variant="brand"  onclick="{!c.deleteacc}" disabled="{!v.enabled}" >Delete</lightning:button>
+<!--/div-->
+
+</aura:component>

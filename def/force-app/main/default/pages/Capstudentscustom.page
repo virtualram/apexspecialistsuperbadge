@@ -1,0 +1,19 @@
+<apex:page showHeader="false" sidebar="false" Controller="studentmastercustomcontroller">
+    <apex:image url="https://www.capgemini.com/wp-content/themes/capgemini-2018-02/assets/images/logo.svg"/>
+    <apex:slds />
+    <apex:form >
+        <apex:pageMessages />
+        <apex:pageBlock title="Student Data">
+            <apex:outputLabel value="NAme"></apex:outputLabel>
+            <apex:inputtext value="{!Name}" id="Name"/><br/>
+            <apex:outputLabel value="Age"> </apex:outputLabel>
+            <apex:inputtext value="{!age}" id="Age"/>  
+        </apex:pageBlock>
+        
+        <apex:commandButton title="Save" action="{!save1}" value="save"/>
+        <apex:commandButton title="Cancel" action="{!cancel1}" value="cancel" />
+        
+    </apex:form>
+  
+    
+</apex:page>

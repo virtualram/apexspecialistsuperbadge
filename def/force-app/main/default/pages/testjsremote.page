@@ -1,0 +1,42 @@
+<apex:page controller="GetContacts">
+    <apex:messages />
+<script type="text/javascript">
+function testjs(){
+var texts ='hi';
+try{
+console.log('his');
+            GetContacts.testjsremoting(
+            function(result,event){
+            if(event.status){
+            texts = result;
+            console.log(texts);
+             document.getElementById('fillfromremote').innerHTML =result;
+            
+            }else{console.log('error');
+           
+           
+             document.getElementById('fillfromremote').innerHTML ='error';
+            }
+            
+            
+            }
+            
+            );
+
+}catch(err){
+ document.getElementById('fillfromremote').innerHTML =err.message;
+console.log(err.message);
+}
+
+
+}
+
+</script>
+    <apex:form id="formid">
+        <apex:pageMessages />
+        <apex:actionRegion >
+        <div id="fillfromremote">Testing js</div></apex:actionRegion>
+         <Button value="click" onclick="testjs()" height="34" width="34">
+         </Button>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cities__c</fullName>
+    <externalId>false</externalId>
+    <label>Capital cities</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Sate__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mumbai</fullName>
+                <default>false</default>
+                <label>Mumbai</label>
+            </value>
+            <value>
+                <fullName>Bangalore</fullName>
+                <default>false</default>
+                <label>Bangalore</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Mah</controllingFieldValue>
+            <valueName>Mumbai</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>KAR</controllingFieldValue>
+            <valueName>Bangalore</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

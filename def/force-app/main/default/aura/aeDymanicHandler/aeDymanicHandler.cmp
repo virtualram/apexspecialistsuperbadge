@@ -1,0 +1,16 @@
+<aura:component >
+    <aura:attribute name="messageFromEvent" type="String"/>
+    <aura:attribute name="numEvents" type="Integer" default="0"/>
+
+   
+    
+    <!-- dont get confused event is name of event and name is type of event-->
+
+    
+    <p>{!v.messageFromEvent}</p>
+    <p>Number of events: {!v.numEvents}</p>
+     <p>
+        
+        <ui:button label="Add dynamic event handler for application event" press="{!c.addAppEventHandler}" />
+    </p>
+</aura:component>

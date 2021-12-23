@@ -1,0 +1,50 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+	<fieldset class="slds-form-element slds-form_compound">
+<legend class="slds-form-element__legend slds-form-element__label">Location</legend>
+<div class="slds-form-element__control">
+<div class="slds-form-element__group">
+<div class="slds-form-element__row">
+<div class="slds-form-element slds-size_1-of-2">
+<label class="slds-form-element__label" for="input-01">Latitude</label>
+<div class="slds-form-element__control">
+<input type="text" id="input-01" class="slds-input" />
+</div>
+</div>
+<div class="slds-form-element slds-size_1-of-2">
+<label class="slds-form-element__label" for="input-02">Longitude</label>
+<div class="slds-form-element__control">
+<input type="text" id="input-02" class="slds-input" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</fieldset>
+  	<fieldset class="slds-form-element slds-form_compound">
+<legend class="slds-form-element__legend slds-form-element__label">Location</legend>
+<div class="slds-form-element__control">
+<div class="slds-form-element__group">
+<div class="slds-form-element__row">
+<div class="slds-form-element slds-size_1-of-2">
+<label class="slds-form-element__label" for="input-01">Latitude</label>
+<div class="slds-form-element__control">
+<input type="text" id="input-01" class="slds-input" />
+</div>
+</div>
+<div class="slds-form-element slds-size_1-of-2">
+<label class="slds-form-element__label" for="input-02">Longitude</label>
+<div class="slds-form-element__control">
+<input type="text" id="input-02" class="slds-input" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</fieldset>
+    
+ <div style="background-color:#16325c">
+  <button class="slds-button slds-button_inverse">Save</button>
+       <button class="slds-button slds-button_inverse">Cancel</button>
+</div>   
+    
+</aura:component>

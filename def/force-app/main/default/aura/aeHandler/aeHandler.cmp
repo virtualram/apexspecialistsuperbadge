@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:attribute name="messageFromEvent" type="String"/>
+    <aura:attribute name="numEvents" type="Integer" default="0"/>
+
+   
+    <aura:handler event="c:aeEvent" action="{!c.handleApplicationEvent}"/>
+    <!-- dont get confused event is name of event and name is type of event-->
+    <!-- remove the name from the handler-->
+    
+    <p>{!v.messageFromEvent}</p>
+    <p>Number of events: {!v.numEvents}</p>
+
+</aura:component>

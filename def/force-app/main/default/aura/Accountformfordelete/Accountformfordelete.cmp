@@ -1,0 +1,73 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <div class="slds-page-header">
+        <div class="slds-page-header__row">
+            <div class="slds-page-header__col-title">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        
+                    </div>
+                    <div class="slds-media__body">
+                        <div class="slds-page-header__name">
+                            <div class="slds-page-header__name-title">
+                                <h1>
+                                    <span class="slds-page-header__title slds-truncate" title="Rohde Corp - 80,000 Widgets">Account Entry Form</span>
+                                </h1>
+                            </div>
+                        </div>
+                        <p class="slds-page-header__name-meta"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <fieldset class="slds-form-element slds-form_compound">
+        <legend class="slds-form-element__legend slds-form-element__label">Location</legend>
+        <div class="slds-form-element__control">
+            <div class="slds-form-element__group">
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-3">
+                        <label class="slds-form-element__label" for="input-01">Latitude</label>
+                        <div class="slds-form-element__control">
+                            <input type="text" id="input-01" class="slds-input" />
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-size_2-of-2">
+                        
+                        
+                        <label class="slds-form-element__label" for="input-01">Name </label>
+                        <ui:inputText class="slds-input"  value="{!v.accObj.Name}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </fieldset>
+    <fieldset class="slds-form-element slds-form_compound">
+        <legend class="slds-form-element__legend slds-form-element__label">Location</legend>
+        <div class="slds-form-element__control">
+            <div class="slds-form-element__group">
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-3">
+                        <label class="slds-form-element__label" for="input-01">Latitude</label>
+                        <div class="slds-form-element__control">
+                            <input type="text" id="input-01" class="slds-input" />
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-size_2-of-2">
+                        
+                        
+                        <label class="slds-form-element__label" for="input-01">Name </label>
+                        <ui:inputText class="slds-input"  value="{!v.accObj.Name}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </fieldset>
+    
+    
+    <button class="slds-button slds-button_success">Button2</button>
+    <button class="slds-button slds-button_success">Button1</button>
+</aura:component>

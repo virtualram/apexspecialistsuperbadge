@@ -1,0 +1,12 @@
+Hi 
+
+These are  your details
+
+Name :{!StudentMaster__c.Name}
+
+DOJ :{!StudentMaster__c.Name}
+Department :{!StudentMaster__c.Department__c}
+
+
+Thanks
+{!User.Username}

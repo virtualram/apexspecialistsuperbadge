@@ -1,0 +1,61 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="boolval" type="boolean" default="false" access="global"/>
+     <aura:dependency resource="markup://c:TestUIContact" />
+    <fieldset class="slds-form--compound">
+  <legend class="slds-form-element__label">Location</legend>
+  <div class="form-element__group">
+    <div class="slds-form-element__row">
+      <div class="slds-form-element slds-size--1-of-2">
+        <label class="slds-form-element__label" for="input-01">Latitude</label>
+        <input id="input-01" class="slds-input" type="text" />
+      </div>
+      <div class="slds-form-element slds-size--1-of-2">
+        <label class="slds-form-element__label" for="input-02">Longitude</label>
+        <input id="input-02" class="slds-input" type="text" />
+      </div>
+    </div>
+  </div>
+</fieldset>
+<fieldset class="slds-form--compound">
+  <legend class="slds-form-element__label">Address</legend>
+  <div class="form-element__group">
+    <div class="slds-form-element__row">
+      <div class="slds-form-element slds-size--1-of-1">
+        <label class="slds-form-element__label" for="input-03">Street</label>
+        <input id="input-03" class="slds-input" type="text" />
+      </div>
+    </div>
+    <div class="slds-form-element__row">
+      <div class="slds-form-element slds-size--1-of-2">
+        <label class="slds-form-element__label" for="input-04">City</label>
+        <input id="input-04" class="slds-input" type="text" />
+      </div>
+      <div class="slds-form-element slds-size--1-of-2">
+        <label class="slds-form-element__label" for="input-05">State</label>
+        <input id="input-05" class="slds-input" type="text" />
+      </div>
+    </div>
+    <div class="slds-form-element__row">
+      <div class="slds-form-element slds-size--1-of-2">
+        <label class="slds-form-element__label" for="input-06">ZIP Code</label>
+        <input id="input-06" class="slds-input" type="text" />
+      </div>
+    </div>
+  </div>
+    <div>
+        <ui:inputcheckbox value="{!v.boolval}" label="Show Dynamic option?" />
+    </div>
+</fieldset>
+    <button class="slds-button slds-button--neutral slds-button--small">Cancel</button>
+        <button class="slds-button slds-button--neutral slds-button--small slds-button--brand">Save</button>
+    <div  class="slds-modal__container" >
+    <div class="slds-modal__content slds-p-around_medium"  aura:id ="body1"/>
+        </div>
+    <aura:renderIf isTrue="{!v.boolval}">
+        <lightning:button label="load component" onclick="{!c.getCompnent}" />
+        <lightning:button label="remove component" onclick="{!c.removecomponent}" />
+    </aura:renderIf>    
+    
+    
+    
+</aura:component>

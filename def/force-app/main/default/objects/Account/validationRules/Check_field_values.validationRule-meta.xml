@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_field_values</fullName>
+    <active>false</active>
+    <description>check for changed values</description>
+    <errorConditionFormula>AND( NOT(ISNEW()), PRIORVALUE( AnnualRevenue )&gt; AnnualRevenue    )</errorConditionFormula>
+    <errorDisplayField>AnnualRevenue</errorDisplayField>
+    <errorMessage>Current value of annual revenue should be more than the previous value of annual revenue</errorMessage>
+</ValidationRule>

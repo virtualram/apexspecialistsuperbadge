@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>Leadautoresponserules</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <formula>iSNEW()</formula>
+            <senderEmail>narenrr@yahoo.com</senderEmail>
+            <senderName>Supportdeask</senderName>
+            <template>unfiled$public/AutoresponseRullemailtemplate</template>
+        </ruleEntry>
+    </autoResponseRule>
+    <autoResponseRule>
+        <fullName>te</fullName>
+        <active>false</active>
+    </autoResponseRule>
+    <autoResponseRule>
+        <fullName>test</fullName>
+        <active>false</active>
+    </autoResponseRule>
+</AutoResponseRules>

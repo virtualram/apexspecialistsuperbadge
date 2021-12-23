@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>a</fullName>
+        <description>a</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>narenrr@yahoo.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/CommunityForgotPasswordEmailTemplate</template>
+    </alerts>
+    <alerts>
+        <fullName>final</fullName>
+        <description>final</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>narenrr@yahoo.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/CommunityChangePasswordEmailTemplate</template>
+    </alerts>
+    <alerts>
+        <fullName>first_setep</fullName>
+        <description>first setep</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>narenrr@yahoo.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/CommunityForgotPasswordEmailTemplate</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Installstatus</fullName>
+        <field>DeliveryInstallationStatus__c</field>
+        <literalValue>Completed</literalValue>
+        <name>Installstatus</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>rejectfieldupdate</fullName>
+        <field>DeliveryInstallationStatus__c</field>
+        <literalValue>Yet to begin</literalValue>
+        <name>rejectfieldupdate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <tasks>
+        <fullName>Oppotunity_has_entered_approval_process_please_take_a_look</fullName>
+        <assignedTo>narenrr@yahoo.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>Oppotunity has entered approval process -please take a look</subject>
+    </tasks>
+    <tasks>
+        <fullName>Record_is_rejected</fullName>
+        <assignedTo>narenrr@yahoo.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Record is rejected</subject>
+    </tasks>
+    <tasks>
+        <fullName>entere_approval_step</fullName>
+        <assignedTo>narenrr@yahoo.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>entere approval step</subject>
+    </tasks>
+    <tasks>
+        <fullName>records_is_approved</fullName>
+        <assignedTo>narenrr@yahoo.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>records is approved</subject>
+    </tasks>
+</Workflow>

@@ -1,0 +1,6 @@
+<aura:component >
+	 <ltng:require styles="https://js.arcgis.com/4.1/esri/css/main.css" />
+    <ltng:require scripts="https://js.arcgis.com/4.1/" afterScriptsLoaded="{!c.myAction}" />
+    <div id="mapDiv"></div>
+
+</aura:component>

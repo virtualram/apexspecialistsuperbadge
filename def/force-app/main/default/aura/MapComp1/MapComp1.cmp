@@ -1,0 +1,14 @@
+<aura:component >
+  <aura:attribute name="lat" type="double"/>
+     <aura:attribute name="long" type="double"/>
+    <aura:registerevent name="MapEvent"  type="c:MapEvent" />
+    <ui:inputtext class="form-control"  value="{!v.lat}"
+           placeholder="Enter Latitude" />
+    
+     <ui:inputtext class="form-control"  value="{!v.long}"
+            placeholder="Enter Longitude"/>
+    
+    <p><ui:button label="Click here to fire mapst"     press="{!c.setmapcoords}" /></p>
+    
+    
+</aura:component>

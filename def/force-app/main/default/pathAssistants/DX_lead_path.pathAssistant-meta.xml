@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>DX lead path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Company</fieldNames>
+        <fieldNames>Description</fieldNames>
+        <fieldNames>Email</fieldNames>
+        <fieldNames>HasOptedOutOfEmail</fieldNames>
+        <fieldNames>Phone</fieldNames>
+        <info>&lt;p&gt;Please reach office at correct time designated by the client.&lt;/p&gt;&lt;p&gt;Carry all support pdf&lt;/p&gt;&lt;p&gt;Use chatter group laptopsales for l1 queries&lt;/p&gt;&lt;p&gt;Update phone number if it has changed&lt;/p&gt;</info>
+        <picklistValueName>Open - Not Contacted</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Please  confirm next meeting and convey the team members who should be present.&lt;/p&gt;</info>
+        <picklistValueName>Working - Contacted</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>DXC</recordTypeName>
+</PathAssistant>

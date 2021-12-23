@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>parentstate__c</name>
+    <picklistValues>
+        <masterLabel>kerala</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>maharashtra</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

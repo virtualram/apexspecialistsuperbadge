@@ -1,0 +1,60 @@
+<apex:page Controller="sampleCon1">
+    <apex:form >
+        <apex:selectList value="{!countries}" multiselect="true">
+            <apex:selectOptions value="{!items}"/>
+        </apex:selectList><p/>
+
+        <apex:commandButton value="Test" action="{!test}" rerender="out" status="status"/>
+ 
+
+    <apex:outputPanel id="out">
+        <apex:actionstatus id="status" startText="testing...">
+            <apex:facet name="stop">
+                <apex:outputPanel >
+                    <p>You have selected:</p>
+                    <apex:dataList value="{!countries}" var="c">{!c}</apex:dataList>
+                </apex:outputPanel>
+            </apex:facet>
+        </apex:actionstatus>
+    </apex:outputPanel>
+    
+    
+        <apex:pageBlock title="Contacts to Select">
+
+            <apex:pageBlockTable value="{!cons}" var="item">
+            
+                <apex:column value="{!item.coo.name}"/>
+           
+                <apex:column value="{!item.selected1}"/>
+            
+                <apex:column headerValue="Add to category">
+                    <apex:inputCheckbox value="{!item.selected1}"/>
+                </apex:column>
+            
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        
+             
+
+
+
+        
+        <apex:pageBlock title="Associated conatcts">
+
+            
+                <apex:repeat value="{!cust}" var="item1">
+                <apex:outputText value="{!item1.Name}"/>
+           
+                <apex:outputText value="{!item1.Contact__r.name}"/> 
+            
+                <apex:outputText value="{!item1.TagObject__r.name}"/>
+            </apex:repeat>
+            
+
+        </apex:pageBlock>
+        
+</apex:form>
+ 
+        
+
+</apex:page>

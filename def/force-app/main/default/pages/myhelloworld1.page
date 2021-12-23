@@ -1,0 +1,18 @@
+<apex:page Standardcontroller="Account"  >
+   
+        <apex:pageBlock title="Accounts" tabStyle="Account">
+        
+           
+                    
+            <apex:pageBlockSection title="Details">
+                <apex:outputField value="{!Account.Name}"/>
+                <apex:outputField value="{!Account.Type}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Related List">
+                <Apex:relatedlist list="Contacts"/>
+                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+   
+    
+</apex:page>

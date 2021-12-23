@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Masterhotelbill</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Masterhotelbill</value>
+    </caseValues>
+    <layouts>
+        <layout>MasterbillSecond</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Masterhotelbill Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label></label>
+        <name>Testfirst</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Testsecond</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>b1</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>b2</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

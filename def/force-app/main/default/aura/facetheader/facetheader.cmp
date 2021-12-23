@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <aura:attribute name="header1" type="Aura.Component[]" />
+     
+    <div>
+         <aura:set attribute="header1">
+            Hello Header!
+        </aura:set>
+        <span class="header">{!v.header1}</span><br/>
+        <span class="body">{!v.body}</span>
+    </div>
+
+</aura:component>

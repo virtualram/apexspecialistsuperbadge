@@ -1,0 +1,46 @@
+<aura:component controller ="Contactcreator"  implements="lightning:actionOverride,force:lightningQuickAction,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,lightning:actionOverride,force:hasRecordId" access="global" >
+    <aura:attribute name="ContactLastName" type="String" />
+    <aura:attribute name="Email" type="String" />
+    <aura:attribute name="conObj" type="Contact" default="{'sobjectType':'Contact'}"/>
+    <aura:attribute name="truthy" type="Boolean" default="false"/>
+    <aura:attribute name="errormessage" type="String" />
+   <aura:handler name="init" value="this" action="{!c.doInit}"/>
+	
+    
+    
+    
+    
+    
+    <fieldset class="slds-form-element slds-form-element_compound">
+<legend class="slds-form-element__legend slds-form-element__label">Contact Detail</legend>
+<div class="slds-form-element__control">
+<div class="slds-form-element__row">
+<div class="slds-size_1-of-2">
+<div class="slds-form-element">
+
+<div class="slds-form-element__control">
+ <ui:inputtext value="{!v.conObj.LastName}" label ="LastName"/>
+</div>
+</div>
+</div>
+<div class="slds-size_1-of-2">
+<div class="slds-form-element">
+
+<div class="slds-form-element__control">
+     <ui:inputtext value="{!v.conObj.Email}" label ="Email"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</fieldset>
+      <lightning:button class="slds-button slds-button_success" label ="Save" title="Save" onclick="{!c.save1}"/>
+    
+    <button class="slds-button slds-button_brand">Cancel</button>
+    
+    <aura:if isTrue ="{!v.truthy}">
+     <div>
+        {!v.errormessage}
+    </div>
+    </aura:if>
+</aura:component>

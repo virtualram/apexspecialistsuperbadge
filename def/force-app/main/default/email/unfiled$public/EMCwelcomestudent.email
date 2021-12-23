@@ -1,0 +1,11 @@
+Hello   {!StudentMasteremc__c.Name}   ,
+
+
+         Welcome to our univsersity,please find your welcome kit attached..
+         You can collect your id card shortly.
+
+Thanks,
+
+{!StudentMasteremc__c.OwnerLastName}
+
+University Admin

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Position</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Position&apos;s</value>
+    </caseValues>
+    <layouts>
+        <layout>Position Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>rentvalidation</name>
+    </validationRules>
+    <workflowTasks>
+        <name>New_Application_notification</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>rejected</name>
+        <subject></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

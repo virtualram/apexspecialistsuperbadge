@@ -1,0 +1,33 @@
+<aura:component  controller="ContactController1" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" >
+    <aura:attribute name="contacts" type="Contact[]"/>   
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <!--skip this line-->
+    <aura:handler event="c:searchbarcomp" action="{!c.searchKeyChange2}"/>
+    <!--c:eventname-->
+    <!--aura handler of application should not have name atrribute -->
+    <ul class="list-group blue">
+        <aura:iteration items="{!v.contacts}" var="contact">
+            <li class="list-group-item red">                
+                <div class="demo-only slds-size_3-of-4">
+                    <div class="slds-media slds-media_small">
+                        <div class="slds-media__figure">
+                            <span class="slds-avatar slds-avatar_large">
+                                <lightning:avatar src="{!$Resource.SLDS+'/assets/images/avatar2.jpg'}"  />
+                                                           </span>
+                        </div> 
+                        <div class="slds-media__body ">
+                            <!--<c:svgicon svgPath="/resource/slds214/assets/icons/standard-sprite/svg/symbols.svg#contact" category="standard" size="large" name="account" />-->
+                            <a aura:id="link1" href="{! '#contact/' + contact.Id }" >
+                                <!-- onclick="{!c.showalert}">-->
+                                <p>{!contact.Name}</p>
+                                <p>{!contact.Phone}</p>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </aura:iteration>
+    </ul>   
+    
+</aura:component>

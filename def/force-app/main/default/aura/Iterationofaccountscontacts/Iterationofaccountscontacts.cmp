@@ -1,0 +1,26 @@
+<aura:component controller="ContactController" implements="force:appHostable,flexipage:availableForAllPageTypes"    access="global">
+   
+    <aura:attribute name="accid"  type="String" default=""/>  
+    
+    <aura:attribute name="contactlist" type="Contact[]"/>    
+      <aura:handler name="change" value="{!v.accid}" action="{!c.getacccontacts}"/>
+    
+   <ul class="list-group">
+     <aura:iteration items="{!v.contactlist}" var ="cont">
+        
+        <li>
+         Contact Name {!cont.Name}
+            
+         
+         </li>
+        
+        </aura:iteration>
+    </ul>
+     <!--Lightning Form-->
+    
+        <ui:inputText  label="Accountid" value="{!v.accid}" />    
+      
+    
+
+    
+</aura:component>

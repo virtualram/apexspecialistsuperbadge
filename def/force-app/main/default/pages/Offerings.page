@@ -1,0 +1,30 @@
+<apex:page standardController="Offering__c" recordsetVar="offerings">
+<apex:form >
+<apex:dataTable value="{!offerings}" var="offeritem" rowClasses="odd,even" >
+<apex:column headerValue="Offering Name" >
+<apex:outputText value="{!offeritem.name}"   />
+</apex:column>
+<apex:column headerValue="Offering Description">
+<apex:outputField value="{!offeritem.Description_Text_Area__c}">
+</apex:outputField>
+</apex:column>
+<apex:column headerValue="Offering id">
+<apex:outputField value="{!offeritem.id}" id="recid" >
+
+</apex:outputField>
+</apex:column>
+
+<apex:column >
+<apex:commandButton onclick="javascript:alert('{!offeritem.id}');var x={!offeritem.id};;" value="Save" id="theButton"/>
+
+</apex:column>
+
+</apex:dataTable>
+</apex:form>
+<apex:repeat value="{!offerings}" var="record">
+   <apex:relatedList subject="{!record.id}" list="Offering_Releases__r"/>
+</apex:repeat>
+
+
+
+</apex:page>

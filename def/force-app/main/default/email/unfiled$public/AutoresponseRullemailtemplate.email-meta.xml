@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>AutoresponseRullemailtemplate</name>
+    <style>none</style>
+    <subject>Lead Created</subject>
+    <textOnly>Thanks for using  our web to lead form . Lead has  been created  with the following details Lead :{!Lead.Id} Lead Name: {!Lead.LastName}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

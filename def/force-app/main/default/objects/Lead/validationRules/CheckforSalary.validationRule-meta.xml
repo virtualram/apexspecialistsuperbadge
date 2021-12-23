@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckforSalary</fullName>
+    <active>true</active>
+    <errorConditionFormula>Salary__c &lt; 10000</errorConditionFormula>
+    <errorDisplayField>Salary__c</errorDisplayField>
+    <errorMessage>This Lead is ineligible for home loan</errorMessage>
+</ValidationRule>

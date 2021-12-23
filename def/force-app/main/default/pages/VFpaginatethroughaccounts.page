@@ -1,0 +1,40 @@
+<apex:page controller="Accountpaginatecontroller" id="OppTable">
+    <apex:pagemessages />
+    <apex:messages />
+    
+   <apex:form id="oppTable0" > 
+    
+    <apex:pageblock title="List of Accounts"  id="oppTable1">
+       <apex:pageBlockButtons >
+               <apex:commandButton action="{!nextpage }" value="Next" />  
+              <apex:commandButton action="{!prevpage }" value="Previous" disabled="{!active}" />  
+           </apex:pageBlockButtons>
+    
+    <apex:pageBlockTable value="{!accountlist}" var="acc"  id="oppTable2">
+     
+  				<apex:column title="Account Name"   id="oppTable3" > 
+           <!--<apex:column value="{!acc.Name}"/>-->  
+     		
+         		
+         	 <apex:inputtext label="name"  value="{!acc.Name}" id="changedname"   >  
+    		   <apex:actionsupport event="onchange" action="{!updateaccount}" reRender="oppTable1,oppTable2"  >
+                   
+              <apex:param name="accountid" assignto="{!accountid}" value="{!acc.Id}"> </apex:param> 
+                <apex:param name="accountname1" assignto="{!accountname}" value="{!$Component.OppTable.oppTable0.oppTable1.oppTable2.oppTable3.changedname.value}"> 
+                </apex:param>                                                        
+ 	   
+          </apex:actionsupport>    
+       </apex:inputtext> 
+              
+             
+    </apex:column>
+   
+                
+       </apex:pageBlockTable>
+    </apex:pageblock>
+   
+           
+    
+    </apex:form>
+    
+</apex:page>

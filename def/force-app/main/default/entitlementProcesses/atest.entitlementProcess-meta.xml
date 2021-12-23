@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>true</active>
+    <entryStartDateField>Case.CreatedDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.IsClosed</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <isVersionDefault>true</isVersionDefault>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Case.CaseNumber</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>testm1</milestoneName>
+        <minutesToComplete>33</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <name>atest</name>
+    <versionMaster>55290000000k9bX</versionMaster>
+    <versionNumber>1</versionNumber>
+</EntitlementProcess>

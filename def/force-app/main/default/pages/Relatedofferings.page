@@ -1,0 +1,59 @@
+<apex:page Controller="Relatedofferings_customController1"  id="page">
+   <apex:form id="formid" >
+ <apex:pageMessages />
+
+<apex:pageblock id="CustomList" title="Offerings"  >
+   <apex:pageBlockTable value="{!offer}" var="o">
+        <apex:column value="{!o.Name}"/>
+        <apex:column value="{!o.id}"/>
+        <apex:column value="{!o.Description_Text_Area__c}"/>
+        <apex:column >
+        
+</apex:column>
+      
+   </apex:pageBlockTable>
+  
+ </apex:pageblock>
+<apex:pageMessages />
+   <apex:pageBlock title="Select Relationships to Display" id="selectionBlock">
+            <apex:panelGrid columns="3">
+ 
+  <apex:selectList value="{!selectedValues}" size="1" onchange="FetchData(this.options[this.selectedIndex].text);">
+  
+            <apex:selectOptions value="{!items}"/> 
+              </apex:selectList>
+       <apex:panelGroup >
+                    <apex:commandButton value=">>" action="{!DoSelect}" 
+                        reRender="formid">
+                        <apex:param name="X" value="{!selectedValues}"/>
+                        </apex:commandButton>
+                    <br/>
+                    <apex:commandButton value="<<" action="{!DoUnselect}" 
+                        reRender="selectionBlock"/>
+                </apex:panelGroup>       
+ <apex:selectList size="5" value="{!selectedValues1}">
+  
+            <apex:selectOptions value="{!relateditems}"/> 
+              </apex:selectList>
+   </apex:panelGrid>
+        </apex:pageBlock>
+        
+        
+        <apex:pageblock id="CustomList11" title="Sequence number" >
+
+        <apex:inputtext value="{!rid}"/>
+       
+         <apex:commandButton value="click" action="{!Doupd}" rerender="formid">
+<apex:param name="XX" value="{!rid}" />
+</apex:commandButton>
+        
+     </apex:pageblock>
+    
+        
+        
+        
+        
+        You are viewing the {!selectedValues} account
+            
+    </apex:form>    
+</apex:page>

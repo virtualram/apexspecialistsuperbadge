@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION"  >
+    <aura:attribute name="lat" type="double"/>
+      <aura:attribute name="long" type="double"/>
+</aura:event>

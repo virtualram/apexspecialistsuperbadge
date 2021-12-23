@@ -1,0 +1,21 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:handler name ="dxcmp"  event="c:DXCevent" action ="{!c.recvdevent}"/>
+    <aura:attribute name="forchildcomp" type="String" />
+    <aura:attribute name="Amount" type="Double" />
+    <aura:attribute name="Tenure" type="Double" />    
+    <aura:attribute name="Maturity" type="Double" />
+     <ui:inputtext class= ".colorme" value="{!v.forchildcomp}" label ="Param to be passed to child comp"/>
+  
+    <ui:inputnumber value="{!v.Amount}" label ="Dep Amount"/>
+    <ui:inputnumber aura:id ="tenure" value="{!v.Tenure}" label ="Tenure"/>
+    Return value :<ui:outputnumber value ="{!v.Maturity}"/> 
+    
+    <lightning:button label ="Calculate" title="Calculate" onclick="{!c.calc}"/>
+     <lightning:button label ="recovervalue" title="recovervalue" onclick="{!c.recover}"/>
+    <lightning:button label ="Collapse" title="Collapse" onclick="{!c.closeMe}"/>
+    
+    <aura:handler name="change" value="{!v.Amount}" action ="{!c.cleanup}"/>
+     <aura:handler name="change" value="{!v.Tenure}" action ="{!c.tenurecheck}"/>
+    
+    <c:DXCbank2 Accountid ="{!v.forchildcomp}"/>
+</aura:component>

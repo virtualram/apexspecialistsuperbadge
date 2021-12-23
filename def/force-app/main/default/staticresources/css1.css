@@ -1,0 +1,6 @@
+.h1 { color: red; font-weight: 900; }
+p { background-color: red; }
+newLink { color: #f60; font-weight: bold; }
+.thicker {
+    font-weight: 900;
+}

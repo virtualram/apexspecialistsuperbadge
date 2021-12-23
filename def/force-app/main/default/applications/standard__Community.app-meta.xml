@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <tabs>standard-Chatter</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Idea</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>Masterhotelbill__c</tabs>
+    <tabs>Billdetailvf</tabs>
+    <tabs>Customer__c</tabs>
+    <tabs>Offering__c</tabs>
+    <tabs>Offering_Release__c</tabs>
+    <tabs>Stage__c</tabs>
+    <tabs>Core_Team_Member__c</tabs>
+    <tabs>Role__c</tabs>
+    <tabs>A__c</tabs>
+    <tabs>B__c</tabs>
+    <tabs>testtetest</tabs>
+    <tabs>Account_detail__c</tabs>
+    <tabs>Stocks__c</tabs>
+    <tabs>google</tabs>
+    <tabs>standard-Questions</tabs>
+    <tabs>Customer_Satisfaction_Survey__c</tabs>
+    <tabs>Candidate__c</tabs>
+    <tabs>Job_Application__c</tabs>
+    <tabs>Regionalaccounts__c</tabs>
+    <tabs>Expense_Reports__c</tabs>
+    <tabs>University_locations__c</tabs>
+    <tabs>Universitiesvfpage</tabs>
+    <tabs>Accountlightningout</tabs>
+    <tabs>ContactTag__c</tabs>
+</CustomApplication>

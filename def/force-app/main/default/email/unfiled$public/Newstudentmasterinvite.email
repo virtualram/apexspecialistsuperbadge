@@ -1,0 +1,3 @@
+Please note new student registered
+Name :{!StudentMaster__c.Name} joined today
+Birthdate  :{!Contact.Birthdate}

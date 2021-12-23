@@ -1,0 +1,278 @@
+<aura:component controller="RFPlightningController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,lightning:actionOverride,force:hasRecordId" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+   <!-- <aura:attribute name="RFPobj" type="RFP_Request__c" default="{'sobjectType':'RFP_Request__c'}"/>-->
+    <aura:attribute name="myUserContext" type="String"/>
+    <aura:attribute name="AdvisorName" type="String"/>     
+    <aura:attribute name="SecondAdvisor" type="String"/>
+    <aura:attribute name="BaseId" type="String"/>
+    <aura:attribute name="ClientType" type="String"/>
+    <aura:attribute name="Consultant" type="String" />    
+    <aura:attribute name="ConsultantForOpp" type="Boolean" default="false"/>
+    <!-- <aura:attribute name="ContactName" type="string" /> -->
+    <aura:attribute name="DeliveryMethod" type="String"/>
+    <aura:attribute name="Difficulty" type="String"/>
+    <aura:attribute name="knowCompetitor" type="Boolean" default='false'/>    
+    <aura:attribute name="FinalPresentation" type="String"/>
+    <!-- <aura:attribute name="OpportunityMode" type="string"/>  -->
+    <aura:attribute name="HowYouComeAcrossThisOpp" type="String"/>
+    <aura:attribute name="HowtoDifferenciate" type="String"/>
+    <aura:attribute name="Length" type="String"/>
+    <aura:attribute name="LostOrWon" type="String"/>
+    <aura:attribute name="MDName" type="String"/>
+    <aura:attribute name="NonTaxableSubclientType" type="String"/>
+    <aura:attribute name="Opportunity" type="String" />
+      
+	<aura:attribute name="RFPRequestReason" type="String" />
+	<aura:attribute name="RequestType" type="String" />
+	<!-- <aura:attribute name="Status" type="String" /> -->
+   
+    <aura:attribute name="RFPDueDate" type="Date" default=""/>
+    <aura:attribute name="TeamContact" type="String"/>
+    <aura:attribute name="Issues" type="String" />
+    <aura:attribute name="RelationshipToThem" type="String"/>
+    <aura:attribute name="theirPosition" type="String"/>    
+    <aura:attribute name="KeyDescisionMaker" type="String"/>    
+    <aura:attribute name="CompetitorDetails" type="String"/>    
+    <!-- <aura:attribute name="ReasonforRFP" type="Boolean" default='false'/>-->
+    <aura:attribute name="myRecordId" type="String" description="Record to which the files should be attached" />
+   
+    
+    <!-- PAGE HEADER -->
+ 
+    <lightning:layout >
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10"> 
+          <div class="slds-page-header" role="banner">
+            <div class="slds-grid">
+              <div class="slds-p-right_small">
+                <lightning:icon iconName="custom:custom64" alternativeText="New RFP Request"/>
+              </div>  
+              <div class="slds-col slds-has-flexi-truncate">
+                <!-- HEADING AREA -->
+                <p class="slds-text-title--caps slds-line-height--reset">RFP Request</p>
+                <h1 class="slds-page-header__title slds-truncate" title="My Accounts">New</h1>
+                <!-- / HEADING AREA -->
+              </div>       
+            </div>        
+          </div>
+        </lightning:layoutItem>
+    </lightning:layout>     
+
+     <lightning:layout multipleRows="true" class="slds-m-bottom_large" >     
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10">   
+  	       <div class="slds-text-color_error">
+          	<ui:outputRichText aura:id="txtErrid" />
+      	  </div>
+        </lightning:layoutItem>
+ 
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10"> 
+          <h3 class="slds-section-title--divider">Information</h3>
+        </lightning:layoutItem>
+            
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDeviceSize="10" mediumDeviceSize="5">
+            <!--Controller Field-->
+                    <lightning:tabset >
+                <lightning:tab label="Required Fields">
+             <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDeviceSize="10" mediumDeviceSize="5">
+            <!--<c:BaseLookupComponent BaseId="{!v.BaseId}" /> -->
+            </lightning:layoutItem>	          
+                
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDevicesize="10" mediumDeviceSize="10"> 
+            <label class="slds-form-element__label" for="select-02">CSA/Second FA</label>
+            <c:rrUserLookup />
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDeviceSize="10" mediumDeviceSize="5">
+            <!--Controller Field-->
+            <label class="slds-form-element__label" for="select-01">Client Type</label>               
+            <div> 
+              <ui:inputSelect required="true" class="slds-select Required" aura:id="typeid" change="{!c.onpicklistChange1}" />        
+            </div>        
+        </lightning:layoutItem>
+        
+         <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDeviceSize="10" mediumDeviceSize="5">
+            <!--Controller Field-->
+            <label class="slds-form-element__label" for="select-01">Delivery Method</label>               
+            <div> 
+              <ui:inputSelect required="true" class="slds-select Required" aura:id="methodid" change="{!c.onpicklistChange2}" />        
+            </div>        
+        </lightning:layoutItem>
+         
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDeviceSize="10" mediumDeviceSize="5">
+            <!--Controller Field-->
+            <label class="slds-form-element__label" for="select-01">Difficulty</label>               
+            <div> 
+              <ui:inputSelect required="true" class="slds-select Required" aura:id="difficultid" change="{!c.onpicklistChange3}" />        
+            </div>        
+        </lightning:layoutItem>
+         
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDeviceSize="10" mediumDeviceSize="5">
+            <!--Controller Field-->
+            <label class="slds-form-element__label" for="select-01">Length</label>               
+            <div> 
+              <ui:inputSelect required="true" class="slds-select Required" aura:id="lengthid" change="{!c.onpicklistChange4}" />        
+            </div>        
+        </lightning:layoutItem>
+                    
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDeviceSize="10" mediumDeviceSize="5">
+            <!--Controller Field-->
+            <label class="slds-form-element__label" for="select-01">Request Type</label>               
+            <div> 
+              <ui:inputSelect required="true" class="slds-select Required" aura:id="requesttypeid" change="{!c.onpicklistChange5}" />        
+            </div>        
+        </lightning:layoutItem>
+                    
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDeviceSize="10" mediumDeviceSize="5">
+            <!--Controller Field-->
+            <label class="slds-form-element__label" for="select-01">Finals Presentation?</label>               
+            <div> 
+              <ui:inputSelect required="true" class="slds-select Required" aura:id="finalspresentationid" change="{!c.onpicklistChange6}" />        
+            </div>        
+        </lightning:layoutItem>
+                    
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDeviceSize="10" mediumDeviceSize="5">
+            <!--Controller Field-->
+            <label class="slds-form-element__label" for="select-01">Lost or Won?</label>               
+            <div> 
+              <ui:inputSelect required="true" class="slds-select Required" aura:id="lostorwonid" change="{!c.onpicklistChange7}" />        
+            </div>        
+        </lightning:layoutItem>
+                    
+         <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDevicesize="10" mediumDeviceSize="10"> 
+            <label class="slds-form-element__label" for="select-02">Consultant</label>
+            <div class="slds-form-element__control">
+            	<ui:inputText value="{!v.Consultant}"  class="slds-input"/>
+            </div>
+        </lightning:layoutItem>
+         
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDevicesize="10" mediumDeviceSize="5">     
+          <lightning:input type="toggle"
+              label="Know? Who are the other competitors"
+              name="competitors"
+              class="slds-p-around--small"
+              checked="{!v.knowCompetitor}"
+              messageToggleActive="Yes"
+              messageToggleInactive="No"
+             />
+        </lightning:layoutItem>
+                    
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDevicesize="10" mediumDeviceSize="10">
+          <div class="slds-form-element">          
+  	        <label class="slds-form-element__label" >How did you come across this opportunity</label>
+          	<div class="slds-form-element__control">
+          		<ui:inputTextArea class="Required" aura:id="comeforthisoppid" value="{!v.HowYouComeAcrossThisOpp}" rows="3" cols="60"/>
+              </div>
+          </div>
+        </lightning:layoutItem>
+         
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDevicesize="10" mediumDeviceSize="10">
+          <div class="slds-form-element">          
+  	        <label class="slds-form-element__label" >How to differentiate ourselves in this?</label>
+          	<div class="slds-form-element__control">
+          		<ui:inputTextArea class="Required" aura:id="differenciateid" value="{!v.HowtoDifferenciate}" rows="3" cols="60"/>
+              </div>
+          </div>
+        </lightning:layoutItem>
+                    
+        
+		 
+                </lightning:tab>
+                <lightning:tab label="Optional fields">
+         <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDevicesize="10" mediumDeviceSize="5">     
+          <lightning:input type="toggle"
+              label="Consultant for this opp?"
+              name="consultant"
+              class="slds-p-around--small"
+              checked="{!v.ConsultantForOpp}"
+              messageToggleActive="Yes"
+              messageToggleInactive="No"
+             />
+        </lightning:layoutItem> 
+             <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDevicesize="10" mediumDeviceSize="10">
+          <div class="slds-form-element">          
+  	        <label class="slds-form-element__label" >Why is this RFP being issued?</label>
+          	<div class="slds-form-element__control">
+          		<ui:inputTextArea class="Required" aura:id="requestreasonid" value="{!v.RFPRequestReason}" rows="3" cols="60"/>
+              </div>
+          </div>
+        </lightning:layoutItem>
+                    
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDevicesize="10" mediumDeviceSize="10">
+          <div class="slds-form-element">          
+  	        <label class="slds-form-element__label" >What specific issues is the prospect facing?</label>
+          	<div class="slds-form-element__control">
+          		<ui:inputTextArea class="Required" aura:id="issuesid" value="{!v.Issues}" rows="3" cols="60"/>
+              </div>
+          </div>
+        </lightning:layoutItem>
+                    
+		<lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDevicesize="10" mediumDeviceSize="10">
+          <div class="slds-form-element">          
+  	        <label class="slds-form-element__label" >What is our relationship to them?</label>
+          	<div class="slds-form-element__control">
+          		<ui:inputTextArea class="Required" aura:id="relationshiptothemid" value="{!v.RelationshipToThem}" rows="3" cols="60"/>
+              </div>
+          </div>
+        </lightning:layoutItem>
+         
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDevicesize="10" mediumDeviceSize="10">
+          <div class="slds-form-element">          
+  	        <label class="slds-form-element__label" >What is their position within the organization?</label>
+          	<div class="slds-form-element__control">
+          		<ui:inputTextArea class="Required" aura:id="theirpositionid" value="{!v.theirPosition}" rows="3" cols="60"/>
+              </div>
+          </div>
+        </lightning:layoutItem>
+                    
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDevicesize="10" mediumDeviceSize="10">
+          <div class="slds-form-element">          
+  	        <label class="slds-form-element__label" >What key decision makers do we know?</label>
+          	<div class="slds-form-element__control">
+          		<ui:inputTextArea class="Required" aura:id="keydescisionmakerid" value="{!v.KeyDescisionMaker}" rows="3" cols="60"/>
+              </div>
+          </div>
+        </lightning:layoutItem>
+                    
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDevicesize="10" mediumDeviceSize="10">
+          <div class="slds-form-element">          
+  	        <label class="slds-form-element__label" >Who are the competitors?</label>
+          	<div class="slds-form-element__control">
+          		<ui:inputTextArea class="Required" aura:id="competitordetailsid" value="{!v.CompetitorDetails}" rows="3" cols="60"/>
+              </div>
+          </div>
+        </lightning:layoutItem>
+                    
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDevicesize="10" mediumDeviceSize="5"> 
+         <label class="slds-form-element__label" for="select-02">MD Name</label>          
+        </lightning:layoutItem>        
+         
+                       
+   	   
+        <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDevicesize="10" mediumDeviceSize="5">
+          <label class="slds-form-element__label" >Team Contact</label>
+        <!--  <ui:inputSelect required="true" class="slds-select Required" aura:id="selectlocation"  change="{!c.onControllerFieldChanges}" />  -->
+        </lightning:layoutItem>	
+         
+         <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDevicesize="10" mediumDeviceSize="5">
+         <lightning:input type="date" label="RFP Due to prospect" name="date"  value="{!v.RFPDueDate}"/>     
+        </lightning:layoutItem>       
+         <lightning:layoutItem flexibility="auto" class="slds-m-around_xxx-small slds-p-left_x-large slds-p-right_x-large" size="10" smallDevicesize="10" mediumDeviceSize="5">
+          <!-- <c:FileUpload />     -->      
+        </lightning:layoutItem>  
+                </lightning:tab>
+                </lightning:tabset>
+                     
+        </lightning:layoutItem>
+
+     </lightning:layout>
+
+   <lightning:layout HorizontalAlign="center">
+      <lightning:layoutItem class="slds-m-around_xxx-small slds-p-around_x-large" size="10">
+          <!--<lightning:button variant="brand" label="Cancel" onclick="{!c.closeModel}"/>   -->       
+          <!--<lightning:button variant="brand" label="etResourceValues" iconName="utility:download" iconPosition="left" onclick="{!c.getResValues}"/>     -->
+        <div align="center" draggable="false" >
+           <lightning:button variant="brand" label="Save and Review" iconName="utility:save" iconPosition="left" onclick="{!c.save}"/>         
+        </div>
+      </lightning:layoutItem>        
+    </lightning:layout>
+    
+</aura:component>

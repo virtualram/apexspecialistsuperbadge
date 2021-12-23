@@ -1,0 +1,10 @@
+.THIS {
+    background-color: PATTEN_BLUE;
+
+}
+.THIS.toggle {
+    display: none;
+}
+.THIS.toggle1 {
+    display: inline;
+}
